@@ -1,0 +1,35 @@
+#navbar{
+  background-color: #476489;
+  border-bottom: 1px solid black;
+}
+#navbar a{
+margin-right: 50px;
+}
+#fondHeader{
+  height: 300px;
+  background-image: linear-gradient(to bottom right, #2274A5, #ffff);
+}
+#menu1{
+  border: 1px solid black;
+  -webkit-box-shadow: 5px 5px 15px 3px #000000;
+  box-shadow: 5px 5px 15px 3px #000000;
+  margin-top: 1rem;
+}
+#menu1 a{
+  color: #476489;
+  font-weight: bold;
+}
+.titreHeader1{
+  font-size: 8vw;
+  font-family: 'Galindo', cursive;
+  color: orange;
+  text-shadow: 2px 2px 2px #000000;
+  text-align: center;
+
+}
+.titreHeader2{
+  font-size: 2vw ;
+  text-align: center;
+  font-family: 'Averia Serif Libre', cursive;
+
+}
