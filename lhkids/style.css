@@ -4,6 +4,10 @@
 }
 #navbar a{
 margin-right: 50px;
+font-family: 'Galindo', cursive;
+}
+#navbar a:hover{
+  color: orange;
 }
 #fondHeader{
   height: 300px;
@@ -18,18 +22,49 @@ margin-right: 50px;
 #menu1 a{
   color: #476489;
   font-weight: bold;
+  font-family: 'Galindo', cursive;
+
+}
+#menu1 a:hover{
+  color: orange;
 }
 .titreHeader1{
   font-size: 8vw;
   font-family: 'Galindo', cursive;
   color: orange;
-  text-shadow: 2px 2px 2px #000000;
+  text-shadow: 5px 5px 5px #000000;
   text-align: center;
+  margin-top: 1.5rem;
 
 }
 .titreHeader2{
-  font-size: 2vw ;
+  font-size: 1.8vw ;
   text-align: center;
-  font-family: 'Averia Serif Libre', cursive;
-
+  font-family: 'Galindo', cursive;
+  color: #294366;
+}
+#buttons{
+  text-align: center;
+  margin-top: 2.5rem;
+}
+#buttonheader1{
+  width: 13vw;
+  background-color: #2276b2;
+  box-shadow: 5px 5px 20px 3px #000000;
+}
+#buttonheader2{
+  width: 13vw;
+  margin-left: 8rem;
+  background-color: #2276b2;
+  box-shadow: 5px 5px 20px 3px #000000;
+}
+#buttonheader1:hover{
+  width: 13.5vw;
+  height: 6vh;
+  background-color: orange;
+}
+#buttonheader2:hover{
+  width: 13.5vw;
+  height: 6vh;
+  background-color: orange;
 }
