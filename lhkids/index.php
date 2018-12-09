@@ -21,7 +21,7 @@
   <!-- fin navbar       -->
   <div class="container-fluid">
     <div class="row" id="fondHeader">
-      <div class="col s5 m4 l3">
+      <div class="col s5 m6 l3">
         <div class="collection" id="menu1">
         <a href="#!" class="collection-item">Accueil</a>
         <a href="#!" class="collection-item">Les Bon plans sorties !</a>
@@ -29,7 +29,7 @@
         <a href="#!" class="collection-item">Contact</a>
       </div>
     </div>
-    <div class="col s7 m 6 l9 ">
+    <div class="col s7 m6 l9 ">
         <h1 class="titreHeader1">LH KIDS</h1>
         <h2 class="titreHeader2">Échange et partage de bons plans sorties au Havre pour vous et vos enfants !</h2>
           <div id="buttons">
@@ -41,7 +41,19 @@
   </div>
 </div>
     </header>
-<div class="">
+    <!-- presentation -->
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <div class="center-align presentation1 ">
+         <h1 class="center-align" id="title1">LH Kids ?</h1>
+         <p id="text1">LH kids, le site des parents pour les enfants a pour but de vous proposer les meilleurs plans sorties à faire avec vos enfants au Havre et ses alentours.<br>
+                  La selection de sorties LH kids est faite par vous ! LH Kids c'est des parents, des grands-parents, des nounous, tontons, marraines… qui partagent et commentent leurs bons plans. Autant dire que ce sont les meilleurs, et les plus adaptées pour vos enfants !</p>
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
     <script type="text/javascript" src="script.js"></script>

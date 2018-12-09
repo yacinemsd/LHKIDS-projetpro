@@ -1,6 +1,11 @@
+/* navbar */
 #navbar{
-  background-color: #476489;
+  background-color: #274873;
   border-bottom: 1px solid black;
+  height: 65px;
+}
+.logoNav{
+  margin-left: 4rem;
 }
 #navbar a{
 margin-right: 50px;
@@ -9,6 +14,8 @@ font-family: 'Galindo', cursive;
 #navbar a:hover{
   color: orange;
 }
+/* navbar */
+/* header accueil */
 #fondHeader{
   height: 300px;
   background-image: linear-gradient(to bottom right, #2274A5, #ffff);
@@ -38,7 +45,7 @@ font-family: 'Galindo', cursive;
 
 }
 .titreHeader2{
-  font-size: 1.8vw ;
+  font-size: 1.7vw ;
   text-align: center;
   font-family: 'Galindo', cursive;
   color: #294366;
@@ -54,7 +61,7 @@ font-family: 'Galindo', cursive;
 }
 #buttonheader2{
   width: 13vw;
-  margin-left: 8rem;
+  margin-left: 10vw;
   background-color: #2276b2;
   box-shadow: 5px 5px 20px 3px #000000;
 }
@@ -67,4 +74,12 @@ font-family: 'Galindo', cursive;
   width: 13.5vw;
   height: 6vh;
   background-color: orange;
+}
+/* fin header accueil */
+/* presentation  */
+.presentation1{
+
+}
+#text1{
+
 }
