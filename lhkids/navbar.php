@@ -10,7 +10,7 @@
       </div>
     </nav>
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="#">Je m'inscris !.html</a></li>
+      <li><a href="#">Je m'inscris !/a></li>
       <li><a href="#">Connexion</a></li>
     </ul>
 <!-- fin navbar       -->
