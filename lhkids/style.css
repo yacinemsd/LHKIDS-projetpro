@@ -1,3 +1,7 @@
+body{
+  margin: 0;
+  padding: 0;
+}
 /* navbar */
 #navbar{
   background-color: #274873;
@@ -18,7 +22,10 @@ font-family: 'Galindo', cursive;
 /* header accueil */
 #fondHeader{
   height: 300px;
-  background-image: linear-gradient(to bottom right, #2274A5, #ffff);
+  background-image: url(images/fondheader.png);
+  border-bottom: 5px solid #2274A5;
+  border-radius: 0  0 40px 40px;
+  /* background-image: linear-gradient(to bottom right, #2274A5, #ffff); */
   /* border-bottom: 1px solid black; */
 }
 #menu1{
@@ -43,14 +50,15 @@ font-family: 'Galindo', cursive;
   color: orange;
   text-shadow: 5px 5px 7px #000000;
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 
 }
 .titreHeader2{
-  font-size: 1.7vw ;
-  text-align: center;
-  font-family: 'Galindo', cursive;
-  color: #294366;
+margin-top: -1rem;
+font-size: 3.2vh;
+text-align: center;
+font-family: 'Galindo', cursive;
+color: #352f2f;
 }
 #buttons{
   text-align: center;
@@ -92,9 +100,9 @@ font-family: 'Galindo', cursive;
 }
 #text1{
   font-weight: bold;
-  font-size: 1.2vw;
+  font-size: 2.5vh;
   border: 5px solid #2274A5;
-  border-radius: 15px;
+  border-radius: 40px;
   padding: 2rem;
 }
 .presentation2{
@@ -108,25 +116,35 @@ font-family: 'Galindo', cursive;
 }
 #card1{
   border: 5px solid #2274A5;
-  border-radius: 10px;
-  width: 20rem;
-  margin-left: 6rem;
+  border-radius: 32px;
+  padding: 0.5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+
+  /* width: 20rem;
+  margin-left: 6rem;*/
   }
 #card2{
   border: 5px solid #2274A5;
-  border-radius: 10px;
-  width: 20rem;
-  margin-left: 4rem;
+  border-radius: 32px;
+  padding: 0.5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  /* width: 20rem;
+  margin-left: 4rem; */
 }
 #card3{
   border: 5px solid #2274A5;
-  border-radius: 10px;
-  width: 20rem;
-  margin-left: 2rem;
+  border-radius: 32px;
+  padding: 0.5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  /* width: 20rem;
+  margin-left: 2rem; */
 }
 #cardLink{
   border-top: 2px solid #2274A5;
-  background-image: linear-gradient(to bottom left, #2274A5, #ffff);
+  /* background-image: linear-gradient(to bottom left, #2274A5, #ffff); */
 }
 #cardLink a{
   font-weight: bold;
@@ -139,30 +157,35 @@ font-family: 'Galindo', cursive;
 }
 .cardContent p{
   font-weight: bold;
-  font-size: 1.08vw;
-  font-size: 1.2vw;
+  font-size: 2.5vh;
 }
 .titlecard{
   font-family: 'Play', sans-serif;
 }
+/* footer */
 #footer1{
   background-image: linear-gradient(to top left,  #274873, #2274A5);
   margin-top: 4rem;
+  margin-bottom: 0;
 }
 #footer1 h5{
   color: orange;
+  font-size: 4vh;
 }
 #footer2{
   background-color: #274873;
+  margin : 0;
+  padding: 0;
 }
 #Menufooter{
 
+margin-bottom: : 0;
 }
 #Menufooter a{
   font-family: 'Galindo', cursive;
   margin-bottom: 1rem;
   color: #ffff;
-  font-size: 1.4vw;
+  font-size: 2.5vh;
 }
 #Menufooter h5{
    font-family: 'Galindo', cursive;
@@ -171,24 +194,82 @@ font-family: 'Galindo', cursive;
 }
 #Menufooter a:hover{
   color: orange;
-  font-size: 1.5vw;
+  font-size: 2.6vh;
 }
 .logofooter{
   margin-left: 39rem;
 }
 #textfooter h5{
   font-family: 'Slackey', cursive;
-  font-size: 2.5vw;
+  font-size: 5vh;
   color: orange;
   text-shadow: 2px 2px 3px #000000;
 }
 #textfooter p{
   color: #ffff;
-  font-size: 1.4vw;
+  font-size: 2.5vh;
 }
 .mentions a{
-  margin-left: 30rem;
+  margin-left: 36vw;
+  font-size: 1vw;
 }
 .mentions a:hover{
   color: orange;
+}
+#bottomFooter{ /*supprime le margin en bas de footer*/
+  margin-bottom: 0;
+}
+/* fin footer */
+/* navbar formulaire*/
+#navbar2{
+  background-color: #274873;
+  border-bottom: 1px solid black;
+  height: 65px;
+}
+.logoNav{
+  margin-left: 4rem;
+}
+#navbar2 a{
+margin-right: 50px;
+font-family: 'Galindo', cursive;
+}
+#navbar2 a:hover{
+  color: orange;
+}
+/*  fin navbar formulaire */
+/* formulaire inscription */
+#formTitle{
+  margin-top: 5rem;
+  font-family: 'Slackey', cursive;
+  font-size: 4vw;
+  color: orange;
+  text-shadow: 5px 5px 5px #000000;
+}
+#FormInscription{
+  margin-top: 2rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-bottom: 3rem;
+  padding-top: 6rem;
+  border-radius: 10rem;
+}
+.inputError{
+  color: red;
+}
+#buttonSend{
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+/* espace de connexion  */
+#sendConnexion{
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+#FormConnexion{
+  margin-top: 2rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  padding-bottom: 3rem;
+  padding-top: 5rem;
+  border-radius: 7rem;
 }
