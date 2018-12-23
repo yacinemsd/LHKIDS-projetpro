@@ -273,3 +273,9 @@ font-family: 'Galindo', cursive;
   padding-top: 5rem;
   border-radius: 7rem;
 }
+/* profilpage */
+
+.profilBackground{
+  width: 100%;
+  margin: 0;
+}
