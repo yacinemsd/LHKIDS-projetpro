@@ -158,6 +158,7 @@
    <label>Vous êtes :</label>
  </div>
     </div>
+    
     <div class="row">
       <div class="input-field col  s12 l6">
         <input  class="validate" type="email"  id="email" name="email" tabindex="4" value="<?= isset($_POST['email']) ? $_POST['email'] : ''; ?>" > <!-- si $_POST['email'] existe je l'affiche sinon(?) j'affiche $_POST['email'] avec une chaine de caractère vide. -->

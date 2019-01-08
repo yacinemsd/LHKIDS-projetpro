@@ -86,7 +86,7 @@ color: #352f2f;
   background-color: orange;
 }
 /* fin header accueil */
-/* presentation  */
+/* presentation  */ /* presentation  */ /* presentation  */ /* presentation  */
 .presentation1{
   margin-top: 2rem;
   padding-left: 5rem;
@@ -162,7 +162,7 @@ color: #352f2f;
 .titlecard{
   font-family: 'Play', sans-serif;
 }
-/* footer */
+/* footer */ /* footer */ /* footer */ /* footer *//* footer */ /* footer */
 #footer1{
   background-image: linear-gradient(to top left,  #274873, #2274A5);
   margin-top: 4rem;
@@ -220,7 +220,7 @@ margin-bottom: : 0;
   margin-bottom: 0;
 }
 /* fin footer */
-/* navbar formulaire*/
+/* navbar formulaire*/ /* navbar formulaire*/ /* navbar formulaire*/
 #navbar2{
   background-color: #274873;
   border-bottom: 1px solid black;
@@ -237,7 +237,7 @@ font-family: 'Galindo', cursive;
   color: orange;
 }
 /*  fin navbar formulaire */
-/* formulaire inscription */
+/* formulaire inscription *//* formulaire inscription */ /* formulaire inscription */
 #formTitle{
   margin-top: 5rem;
   font-family: 'Slackey', cursive;
@@ -260,7 +260,7 @@ font-family: 'Galindo', cursive;
   margin-top: 2rem;
   margin-bottom: 0;
 }
-/* espace de connexion  */
+/* espace de connexion  */ /* espace de connexion  */ /* espace de connexion  */
 #sendConnexion{
   margin-top: 2rem;
   margin-bottom: 0;
@@ -273,9 +273,43 @@ font-family: 'Galindo', cursive;
   padding-top: 5rem;
   border-radius: 7rem;
 }
-/* profilpage */
-
-.profilBackground{
+/* profilpage */ /* profilpage */ /* profilpage */
+#menuTab{
+  border: 5px solid orange;
+  border-radius: 32px;
+  margin-top: 5rem;
+  padding: 2rem;
+}
+#menuTab > .tabs > li > a{
+  font-family: 'Slackey', cursive;
+  font-size: 3.2vh;
+  color: orange;
+  text-shadow: 2px 2px 3px #000000;
+}
+#menuTab > .tabs > li > a:focus.active{
+  background-color: rgba(246,178,181,0.2);
+  outline: none;
+}
+.imgbackProfil{
+  background-image: linear-gradient(to bottom right, orange, #ffff);
   width: 100%;
-  margin: 0;
+  height: 30vh;
+}
+.imgprofil{
+  margin: 1rem;
+  height: 25vh;
+  width: 12.5vw;
+}
+.divTitleProfile{
+  margin-top: 1.5rem;
+}
+.profiletitle p{
+  font-family: 'Galindo', cursive;
+  font-size: 4vh;
+  text-shadow: 2px 2px 3px #000000;
+  color: #ffa500;
+}
+.profiletitle2 p{
+  font-size: 2.5vh;
+  color: ;
 }

@@ -8,5 +8,9 @@ $(document).ready(function(){
    // js pour textarea formulaire
    $('#textarea1').val(' ');
    M.textareaAutoResize($('#textarea1'));
+   // js menu tab
+   $(document).ready(function(){
+    $('.tabs').tabs();
+  });
 
  });

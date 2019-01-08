@@ -79,7 +79,7 @@
           <p>Simple, rapide et gratuite l'inscription vous permettra d'avoir votre  propre compte LH Kids</p>
         </div>
         <div class="card-action" id="cardLink">
-          <a href="#">Je m'inscris !</a>
+          <a href="inscription.php">Je m'inscris !</a>
         </div>
       </div>
     </div>
@@ -93,7 +93,7 @@
           <p>Accéder à votre propre compte LH Kids, consulter le contenu partagé par la communauté LH Kids</p>
         </div>
         <div class="card-action" id="cardLink">
-          <a href="#">Me connecter</a>
+          <a href="connexion.php">Me connecter</a>
         </div>
       </div>
     </div>

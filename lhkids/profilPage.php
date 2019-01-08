@@ -37,21 +37,69 @@
             <li><a href="#">Contact</a></li>
             <li><a href="connexion.php">Déconnexion</a></li>
           </ul>
+      </header>
       <!-- fin navbar profil -->
       <!-- profile-page-header -->
-    <div class="container-fluid">
+      <div class="container-fluid">
+        <div class="row imgbackProfil center-align">
+          <div class="col s3">
+            <img src="images/iconprofil.svg" alt="profile image" class="circle z-depth-3 imgprofil">
+            </div>
+            <div class="col s3 center-align divTitleProfile">
+                <div class="profiletitle">
+                    <p>Yacine</p>
+                </div>
+                <div class="profiletitle2">
+                     <p>Papa</p>
+               </div>
+            </div>
+            <div class="col s3 center-align divTitleProfile">
+                <div class="profiletitle">
+                    <p>Mes sorties</p>
+                </div>
+                <div class="profiletitle2">
+                     <p>0</p>
+               </div>
+            </div>
+            <div class="col s3 center-align divTitleProfile">
+                <div class="profiletitle center-align">
+                    <p>Mes Favoris</p>
+                </div>
+                <div class="profiletitle2 center-align">
+                     <p>0</p>
+               </div>
+            </div>
+          </div>
+        </div>
+
+      <!--/ profile-page-header -->
+      <div class="container-fluid">
       <div class="row">
-        <div class="col s12">
-          <img class="profilBackground" src="images/fun.jpeg" />
+        <div id="menuTab" class="col s8 offset-s2 z-depth-3">
+          <ul class="tabs">
+            <li class="tab col s4"><a href="#profile" class="active">Mon Profil</a></li>
+            <li class="tab col s4"><a href="#postProfile">Mes posts</a></li>
+            <li class="tab col s4"><a href="#postCom">Commentaires</a></li>
+          </ul>
+        <div class="col s8">
+        <div id="profile" class="">
+          <div class="row">
+            <div class="col s4">
+              <img src="" class="">
+            </div>
+            <div class="col s8">
+
+
+            </div>
+          </div>
+
+        </div>
+        <div id="postProfile" class="">Test 2</div>
+        <div id="postCom" class="">Test 3</div>
         </div>
       </div>
     </div>
-
-    </div>
-      <!--/ profile-page-header -->
-
-    </header>
-
+  </div>
 
 <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
