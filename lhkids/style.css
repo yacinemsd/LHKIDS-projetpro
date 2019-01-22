@@ -2,7 +2,7 @@ body{
   margin: 0;
   padding: 0;
 }
-/* navbar */
+/* navbar *//* navbar *//* navbar *//* navbar */
 #navbar{
   background-color: #274873;
   border-bottom: 1px solid black;
@@ -19,7 +19,7 @@ font-family: 'Galindo', cursive;
   color: orange;
 }
 /* navbar */
-/* header accueil */
+/* header accueil *//* header accueil *//* header accueil *//* header accueil */
 #fondHeader{
   height: 300px;
   background-image: url(images/fondheader.png);
@@ -178,8 +178,7 @@ color: #352f2f;
   padding: 0;
 }
 #Menufooter{
-
-margin-bottom: : 0;
+margin-bottom:  0;
 }
 #Menufooter a{
   font-family: 'Galindo', cursive;
@@ -275,14 +274,14 @@ font-family: 'Galindo', cursive;
 }
 /* profilpage */ /* profilpage */ /* profilpage */
 #menuTab{
-  border: 5px solid orange;
+  border: 3px solid orange;
   border-radius: 32px;
   margin-top: 5rem;
   padding: 2rem;
 }
 #menuTab > .tabs > li > a{
   font-family: 'Slackey', cursive;
-  font-size: 3.2vh;
+  font-size: 1.7vw;
   color: orange;
   text-shadow: 2px 2px 3px #000000;
 }
@@ -305,11 +304,57 @@ font-family: 'Galindo', cursive;
 }
 .profiletitle p{
   font-family: 'Galindo', cursive;
-  font-size: 4vh;
+  font-size: 2.5vw;
   text-shadow: 2px 2px 3px #000000;
   color: #ffa500;
 }
 .profiletitle2 p{
   font-size: 2.5vh;
   color: ;
+}
+#btnprofile{
+  margin-top: 10rem;
+  float: right;
+}
+#profilecard{
+  background-image: linear-gradient(to bottom right, orange, #ffff);
+  border-radius: 40px;
+  margin-top: 2rem;
+}
+#footerProfile{
+  background-image: linear-gradient(to bottom right,  orange, #ffff);
+  margin-top: 4rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#footer2profil{
+    background-color: orange;
+}
+.tablePosts{
+  margin-top: 1rem;
+}
+.buttonsPosts{
+  margin-top: 3rem;
+}
+/* css creationsortie *//* css creationsortie *//* css creationsortie *//* css creationsortie *//* css creationsortie *//* css creationsortie */
+/* .deep-orange.accent-2 {
+    background-color: #ff6e40 !important;
+} */
+.white-text {
+    color: #FFFFFF !important;
+}
+a {
+    text-decoration: none;
+}
+#formcreateSortie{
+  margin-top: 2rem;
+}
+.contenuformcreate{
+  padding : 1rem;
+}
+#cardSortie{
+  background-image: linear-gradient(to Bottom right, #2274A5, #ffff);
+  border-radius: 100px;
+  border: 3px solid #2274A5;
+  margin-top: 2rem;
 }

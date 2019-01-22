@@ -27,8 +27,8 @@
       <div class="col s5 m6 l3">
         <div class="collection" id="menu1">
         <a href="#title1" class="collection-item">Accueil</a>
-        <a href="#!" class="collection-item">Les Bons plans sorties !</a>
-        <a href="#!" class="collection-item">Je partage !</a>
+        <a href="sorties.php" class="collection-item">Les Bons plans sorties !</a>
+        <a href="profilPage.php" class="collection-item">Je partage !</a>
         <a href="#!" class="collection-item">Contact</a>
       </div>
     </div>

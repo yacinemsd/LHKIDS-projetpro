@@ -42,7 +42,7 @@
       <!-- profile-page-header -->
       <div class="container-fluid">
         <div class="row imgbackProfil center-align">
-          <div class="col s3">
+          <div class="col s2">
             <img src="images/iconprofil.svg" alt="profile image" class="circle z-depth-3 imgprofil">
             </div>
             <div class="col s3 center-align divTitleProfile">
@@ -68,6 +68,10 @@
                 <div class="profiletitle2 center-align">
                      <p>0</p>
                </div>
+             </div>
+             <div class="col s1">
+                    <a  id="btnprofile" class="btn-floating btn waves-effect waves-light orange z-depth-2"><i class="material-icons">add</i></a>
+             </div>
             </div>
           </div>
         </div>
@@ -75,32 +79,220 @@
       <!--/ profile-page-header -->
       <div class="container-fluid">
       <div class="row">
-        <div id="menuTab" class="col s8 offset-s2 z-depth-3">
+        <div id="menuTab" class="col s10 offset-s1 z-depth-4">
           <ul class="tabs">
-            <li class="tab col s4"><a href="#profile" class="active">Mon Profil</a></li>
+            <li class="tab col s4"><a href="#profilecard" class="active">Mon Profil</a></li>
             <li class="tab col s4"><a href="#postProfile">Mes posts</a></li>
-            <li class="tab col s4"><a href="#postCom">Commentaires</a></li>
+            <li class="tab col s4"><a href="#creationSortie">Créer une sortie</a></li>
           </ul>
-        <div class="col s8">
-        <div id="profile" class="">
-          <div class="row">
-            <div class="col s4">
-              <img src="" class="">
-            </div>
-            <div class="col s8">
+        <div class="col s12 l8 offset-l2">
+          <div id="profilecard" class="card z-depth-3">
+                    <div class="card-content white-text">
+                      <span class="card-title center-align">Profil</span>
+                         <div class="row">
+                           <div class="col s4">
+                             <img src="images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
+                           </div>
+                           <div class="col s8">
+                             <div class="">
+                              <p>Nom</p>
+                             </div>
+                             <div class="">
+                              <p>Prénom</p>
+                             </div>
+                             <div class="">
+                              <p>Pseudo</p>
+                             </div>
+                             <div class="">
+                              <p>Papa...</p>
+                             </div>
+                             <div class="">
+                              <p>Mail</p>
+                             </div>
 
-
-            </div>
+                           </div>
+                         </div>
+                      </div>
+                      <div class="card-action center-align">
+                        <a href="#">Modifier</a>
+                        <a href="#">Supprimer</a>
+                      </div>
+                    </div>
           </div>
 
+
+        <div id="postProfile" class="">
+          <table class="highlight centered tablePosts">
+     <thead>
+       <tr>
+           <th>N°</th>
+           <th>Date</th>
+           <th>Titre</th>
+           <th> </th>
+       </tr>
+     </thead>
+
+     <tbody>
+       <tr>
+         <td>1</td>
+         <td>01/01/2019</td>
+         <td>Plage/Sortie à la plage</td>
+         <td>
+            <button class="btn-small waves-effect waves-light yellow darken-3" type="submit" name="action">Ouvrir</button>
+        </td>
+       </tr>
+       <tr>
+         <td>2</td>
+         <td>01/01/2019</td>
+         <td>Plage/Sortie à la plage</td>
+         <td>
+           <button class="btn-small waves-effect waves-light yellow darken-3" type="submit" name="action">Ouvrir</button>
+         </td>
+       </tr>
+       <tr>
+         <td>3</td>
+         <td>01/01/2019</td>
+         <td>Plage/Sortie à la plage</td>
+         <td>
+           <button class="btn-small waves-effect waves-light yellow darken-3" type="submit" name="action">Ouvrir</button>
+         </td>
+       </tr>
+     </tbody>
+   </table>
+    <div class="container-fluid buttonsPosts">
+      <div class="row">
+        <div class="col s6 center-align">
+          <button class="btn-large waves-effect waves-light yellow darken-3 z-depth-3" type="" name="action" href="">Créer une sortie !</button>
         </div>
-        <div id="postProfile" class="">Test 2</div>
-        <div id="postCom" class="">Test 3</div>
+        <div class="col s6 center-align">
+          <button class="btn-large waves-effect waves-light yellow darken-3 z-depth-3" type="" name="action">Catalogue de sorties</button>
+        </div>
+      </div>
+    </div>
+  </div> <!--fin div postProfile-->
+
+  <!-- creation sortie --><!-- creation sortie --><!-- creation sortie --><!-- creation sortie -->
+        <div id="creationSortie" class="container-fluid ">
+          <div class="row">
+              <!-- profile-page-sidebar-->
+<!-- profile-page-wall -->
+<div id="formcreateSortie" class="col s12 l10 offset-l1">
+  <!-- profile-page-wall-share -->
+  <div id="" class="row">
+    <div class="col s12">
+      <ul class="tabs tab-profile z-depth-1 orange lighten-1">
+        <li class="tab col s3">
+          <a class="white-text waves-effect waves-light active" href="#UpdateStatus">
+            <i class="material-icons">border_color</i>Description</a>
+        </li>
+        <li class="tab col s3">
+          <a class="white-text waves-effect waves-light" href="#AddPhotos">
+            <i class="material-icons">camera_alt</i>Ajouter photo</a>
+        </li>
+      </ul>
+      <!-- UpdateStatus-->
+      <div id="UpdateStatus" class="tab-content col s12  grey lighten-4">
+        <div class="row contenuformcreate">
+          <div class="col s2">
+            <img src="images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
+          </div>
+          <div class="input-field col s10">
+            <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+            <label for="textarea" class="">Décrivez votre sortie !</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6 share-icons">
+            <a href="#">
+              <i class="material-icons grey-text text-darken-1">camera_alt</i>
+            </a>
+            <a href="#">
+              <i class="material-icons grey-text text-darken-1">account_circle</i>
+            </a>
+            <a href="#">
+              <i class="material-icons grey-text text-darken-1">keyboard</i>
+              <a href="#">
+                <i class="material-icons grey-text text-darken-1">location_on</i>
+          </div>
+          <div class="col s12 m6 right-align">
+            <!-- Dropdown Trigger -->
+            <a class="waves-effect waves-light btn orange accent-3">
+              <i class="material-icons left">rate_review</i> Publier !</a>
+          </div>
+        </div>
+      </div>
+      <!-- AddPhotos -->
+      <div id="AddPhotos" class="tab-content col s12  grey lighten-4">
+        <div class="row contenuformcreate">
+          <div class="col s2">
+            <img src="images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
+          </div>
+          <div class="input-field col s10">
+            <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+            <label for="textarea" class="">Partagez les photos de votre sortie</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6 share-icons">
+            <a href="#">
+              <i class="material-icons grey-text text-darken-1">camera_alt</i>
+            </a>
+            <a href="#">
+              <i class="material-icons grey-text text-darken-1">account_circle</i>
+            </a>
+            <a href="#">
+              <i class="material-icons grey-text text-darken-1">keyboard</i>
+              <a href="#">
+                <i class="material-icons grey-text text-darken-1">location_on</i>
+          </div>
+          <div class="col s12 m6 right-align">
+            <!-- Dropdown Trigger -->
+            <a class="waves-effect waves-light btn orange accent-3">
+              <i class="material-icons left">rate_review</i> Ajouter !</a>
+          </div>
+        </div>
+      </div>
+      <!-- CreateAlbum -->
+
+    </div>
+  </div>
+            </div>
+        </div>
         </div>
       </div>
     </div>
   </div>
-
+<!-- footer -->
+<footer class="" id="footerProfile">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col l4 offset-l2 s12" id="Menufooter">
+        <h5 class="">Menu</h5>
+        <ul>
+          <li><a class="" href="#">Accueil</a></li>
+          <li><a class="" href="#">Les bons plans sorties!</a></li>
+          <li><a class="" href="#">Je partage !</a></li>
+          <li><a class="" href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col l6 s12" id="textfooter">
+        <h5 class="">LH KIDS</h5>
+        <p class="">Site d'échange et de partage de bons plans sorties entre particuliers au Havre et ses alentours.</p>
+      </div>
+      <div class="mentions">
+        <a class="" href="#">Mentions légales LH Kids</a>
+      </div>
+    </div>
+    </div>
+    <div class="container-fluid" id="footer2profil">
+      <div id="bottomFooter" class="row">
+      <div class="col s6 l4 offset-l7">
+          <a class="grey-text text-lighten-4 right" href="#"><img class="" /></a>
+      </div>
+    </div>
+    </div>
+</footer>
+<!-- footer -->
 <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
