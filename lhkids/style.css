@@ -376,3 +376,11 @@ a {
 .rowcomSortie{
 
 }
+/* css mentions légales *//* css mentions légales *//* css mentions légales */
+#TitleMention{
+  margin : 3rem;
+  font-family: 'Slackey', cursive;
+  font-size: 4vw;
+  color: orange;
+  text-shadow: 5px 5px 5px #000000;
+}

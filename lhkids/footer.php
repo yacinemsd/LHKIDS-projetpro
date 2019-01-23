@@ -16,7 +16,7 @@
         <p class="">Site d'échange et de partage de bons plans sorties entre particuliers au Havre et ses alentours.</p>
       </div>
       <div class="mentions">
-        <a class="" href="#">Mentions légales LH Kids</a>
+        <a class="" href="mentionsLegales.php">Mentions légales LH Kids</a>
       </div>
     </div>
     </div>
