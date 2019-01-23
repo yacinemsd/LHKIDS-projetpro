@@ -352,9 +352,27 @@ a {
 .contenuformcreate{
   padding : 1rem;
 }
-#cardSortie{
-  background-image: linear-gradient(to Bottom right, #2274A5, #ffff);
-  border-radius: 100px;
-  border: 3px solid #2274A5;
-  margin-top: 2rem;
+/* css sortie.php *//* css sortie.php *//* css sortie.php *//* css sortie.php */
+#cardsortie{
+  margin-top: 3rem;
+  border-radius: 30px;
+  width: 80%;
+}
+.topcardSortie{
+  border-bottom: 1px solid #80808063;
+  background-image: linear-gradient(to bottom left, #2274A5, #ffff);
+  padding: 0.3rem;
+  border-radius: 30px 30px 0 0;
+}
+.rowCarousel{
+  border-bottom: 1px solid #80808063;
+}
+#carouselSortie{
+  height: 230px;
+}
+.descriptionSortie{
+  border-bottom: 1px solid #80808063;
+}
+.rowcomSortie{
+
 }
