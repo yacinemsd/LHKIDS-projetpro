@@ -72,7 +72,7 @@ require_once 'controllers/controllerInscription.php';
       </div>
     </div>
 
-      <div class="input-field col s12 l4">
+  <div class="input-field col s12 l4">
    <select>
      <option value=" " disabled selected></option>
      <option value="1">Papa</option>

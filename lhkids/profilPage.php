@@ -25,7 +25,7 @@
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="index.php">Accueil</a></li>
-                <li><a href="#">Les sorties!</a></li>
+                <li><a href="sorties.php">Les sorties!</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="connexion.php">Déconnexion</a></li>
               </ul>
@@ -33,7 +33,7 @@
           </nav>
           <ul class="sidenav" id="mobile-demo">
             <li><a href="index.php">Accueil</a></li>
-            <li><a href="#">Les sorties!</a></li>
+            <li><a href="sorties.php">Les sorties!</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="connexion.php">Déconnexion</a></li>
           </ul>
@@ -193,10 +193,77 @@
       <!-- UpdateStatus-->
       <div id="UpdateStatus" class="tab-content col s12  grey lighten-4">
         <div class="row contenuformcreate">
+          <div class="row">
           <div class="col s2">
             <img src="images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
           </div>
           <div class="input-field col s10">
+              <input type="text" class="validate" id="" name="title" tabindex="1" value="">
+              <label for="title">Titre de votre publication</label>
+          </div>
+         </div>
+         <div class="row">
+           <div class="input-field col s12 m5 l5">
+               <input type="text" class="validate" id="" name="lieu" tabindex="1" value="">
+               <label for="lieu">Lieu de la sortie</label>
+           </div>
+           <div class="input-field col s4 m4 l3">
+               <input type="text" class="validate datepicker" id="" name="date" tabindex="2" value="">
+               <label for="date">Date la sortie</label>
+           </div>
+           <div class="input-field col s4 m4 l2">
+               <input type="text" class="validate timepicker" id="" name="timeDebut" tabindex="1" value="">
+               <label for="timeDebut">Heure de début</label>
+           </div>
+           <div class="input-field col s4 m4 l2">
+               <input type="text" class="validate timepicker" id="" name="timeFin" tabindex="2" value="">
+               <label for="timeFin">Heure de fin</label>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col s6 m3 l3">
+             <label>Genre de la sortie : </label>
+              <select>
+                <option value="" disabled selected></option>
+                <option value="">Sport</option>
+                <option value="">Culturelle</option>
+                <option value="">Ludique</option>
+                <option value="">Artistique</option>
+                <option value="">Autres</option>
+              </select>
+           </div>
+           <div class="col s6 m3 l3">
+            <label>Environnement : </label>
+             <select>
+               <option value="" disabled selected></option>
+               <option value="">Intérieur</option>
+               <option value="">Extérieur</option>
+               <option value="">Intérieur et Extérieur</option>
+             </select>
+           </div>
+           <div class="col s6 m3 l3">
+            <label>Tranche d'âge : </label>
+             <select>
+               <option value="" disabled selected></option>
+               <option value="">Tout âge</option>
+               <option value="">1ans et plus</option>
+               <option value="">3ans et plus</option>
+               <option value="">6ans et plus</option>
+               <option value="">10ans et plus</option>
+             </select>
+           </div>
+           <div class="col s6 m3 l3">
+            <label>Prix : </label>
+             <select>
+               <option value="" disabled selected></option>
+               <option value="">Gratuit</option>
+               <option value="">Payant</option>
+               <option value="">Autres(Détails dans la dercription)</option>
+             </select>
+           </div>
+         </div>
+         <div class="row">
+          <div class="input-field col s12">
             <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
             <label for="textarea" class="">Décrivez votre sortie !</label>
           </div>
@@ -269,9 +336,9 @@
       <div class="col l4 offset-l2 s12" id="Menufooter">
         <h5 class="">Menu</h5>
         <ul>
-          <li><a class="" href="#">Accueil</a></li>
-          <li><a class="" href="#">Les bons plans sorties!</a></li>
-          <li><a class="" href="#">Je partage !</a></li>
+          <li><a class="" href="index.php">Accueil</a></li>
+          <li><a class="" href="sortie.php">Les bons plans sorties!</a></li>
+          <li><a class="" href="profilPage.php">Je partage !</a></li>
           <li><a class="" href="#">Contact</a></li>
         </ul>
       </div>
@@ -280,7 +347,7 @@
         <p class="">Site d'échange et de partage de bons plans sorties entre particuliers au Havre et ses alentours.</p>
       </div>
       <div class="mentions">
-        <a class="" href="#">Mentions légales LH Kids</a>
+        <a class="" href="mentionsLegales.php">Mentions légales LH Kids</a>
       </div>
     </div>
     </div>

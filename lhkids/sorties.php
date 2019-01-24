@@ -56,21 +56,26 @@
           </div>
         </div>
         <div class="row rowCarousel">
-          <div class="col s6">
+          <div class="col s12 m6 l6">
             <div class="carousel" id="carouselSortie">
               <a class="carousel-item" href="#one!"><img class="circle z-depth-2" src="images/pix1.jpeg"></a>
               <a class="carousel-item" href="#two!"><img class="circle z-depth-2" src="images/pix2.jpeg"></a>
               <a class="carousel-item" href="#three!"><img class="circle z-depth-2" src="images/pix3.jpeg"></a>
             </div>
           </div>
-          <div class="col s6 ">
-            <div class="">
-            <p class="black-text text-darken-4 margin">Description Sortie :</p>
-          </div>
-          <div class="valign-wrapper">
-            <p class="grey-text text-darken-4 margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus massa sed imperdiet finibus. In dictum volutpat leo, sed elementum mi accumsan et. Proin ut ante semper, ultricies erat vel, imperdiet leo. Vestibulum purus quam, pellentesque non libero id, faucibus viverra est. Praesent magna nisi, pellentesque quis maximus quis, volutpat at risus. Aliquam sit amet arcu auctor, sodales enim vel, facilisis orci.</p>
-          </div>
+          <div class="col s12 m6 l6">
+
         </div>
+        <div class="row">
+        <div class="col s12 valign-wrapper">
+        <div>
+        <p class="black-text text-darken-4 margin">Description Sortie :</p>
+      </div>
+      <div class="valign-wrapper">
+        <p class="grey-text text-darken-4 margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus massa sed imperdiet finibus. In dictum volutpat leo, sed elementum mi accumsan et. Proin ut ante semper, ultricies erat vel, imperdiet leo. Vestibulum purus quam, pellentesque non libero id, faucibus viverra est. Praesent magna nisi, pellentesque quis maximus quis, volutpat at risus. Aliquam sit amet arcu auctor, sodales enim vel, facilisis orci.</p>
+      </div>
+    </div>
+  </div>
         </div>
         <div class="row valign-wrapper">
           <div class="col s3 card-action-share center-align">

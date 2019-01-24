@@ -5,9 +5,9 @@
       <div class="col l4 offset-l2 s12" id="Menufooter">
         <h5 class="">Menu</h5>
         <ul>
-          <li><a class="" href="#">Accueil</a></li>
-          <li><a class="" href="#">Les bons plans sorties!</a></li>
-          <li><a class="" href="#">Je partage !</a></li>
+          <li><a class="" href="index.php">Accueil</a></li>
+          <li><a class="" href="sortie.php">Les bons plans sorties!</a></li>
+          <li><a class="" href="profilPage.php">Je partage !</a></li>
           <li><a class="" href="#">Contact</a></li>
         </ul>
       </div>
