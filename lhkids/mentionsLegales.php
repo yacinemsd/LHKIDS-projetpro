@@ -25,8 +25,7 @@
     <div class="">
       <h1 class="center-align" id="TitleMention">Mentions Légales LH KIDS</h1>
       <div class="center-align mentionsLegales">
-        <strong>La seule contrepartie à l'utilisation de ces mentions légales, est l'engagement total à laisser le lien crédit subdelirium sur cette page de mentions légales.</strong><br />
-                Vos mentions légales :
+
           <h3>1. Présentation du site.</h3>
           <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site <a href="http://www.lhkids.fr/">www.lhkids.fr</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
           <p><strong>Propriétaire</strong> : Messaoudi Yacine –  – Lhkids le havre76<br />

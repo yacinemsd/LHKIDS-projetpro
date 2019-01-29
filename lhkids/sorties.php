@@ -55,6 +55,9 @@
             <i class="material-icons">expand_more</i>
           </div>
         </div>
+        <div class="center-align">
+          <p>Titre de la publication</p>
+        </div>
         <div class="row rowCarousel">
           <div class="col s12 m6 l6">
             <div class="carousel" id="carouselSortie">
@@ -63,15 +66,41 @@
               <a class="carousel-item" href="#three!"><img class="circle z-depth-2" src="images/pix3.jpeg"></a>
             </div>
           </div>
-          <div class="col s12 m6 l6">
-
-        </div>
+          <div class="col s12 m6 l6 center-align">
+            <div class="row">
+              <div class="col">
+                <p>Lieu : Forêt</p>
+              </div>
+              <div class="col">
+                <p>Date : 29/01/2019</p>
+              </div>
+              <div class="col">
+                <p>Début : 14H00 / Fin : 16H00</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+              <p>Genre : Sport</p>
+              </div>
+              <div class="col">
+                <p>Environnement : Extérieur</p>
+              </div>
+            </div>
+            <div class="row center-align">
+              <div class="col">
+              <p>Tranche d'âge : 3-10ans</p>
+              </div>
+              <div class="col">
+                <p>Prix : Gratuit</p>
+              </div>
+            </div>
+          </div>
         <div class="row">
-        <div class="col s12 valign-wrapper">
-        <div>
+        <div class="col s12">
+        <div class="col s2 center-align">
         <p class="black-text text-darken-4 margin">Description Sortie :</p>
       </div>
-      <div class="valign-wrapper">
+      <div class="valign-wrapper col s10">
         <p class="grey-text text-darken-4 margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur maximus massa sed imperdiet finibus. In dictum volutpat leo, sed elementum mi accumsan et. Proin ut ante semper, ultricies erat vel, imperdiet leo. Vestibulum purus quam, pellentesque non libero id, faucibus viverra est. Praesent magna nisi, pellentesque quis maximus quis, volutpat at risus. Aliquam sit amet arcu auctor, sodales enim vel, facilisis orci.</p>
       </div>
     </div>
