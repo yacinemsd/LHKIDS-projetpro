@@ -1,5 +1,5 @@
 <?php
-require_once 'controllers/controllerInscription.php';
+require_once '../controllers/controllerInscription.php';
  ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -7,7 +7,7 @@ require_once 'controllers/controllerInscription.php';
     <meta charset="utf-8" />
     <title>Inscription</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <!-- materialize -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
@@ -24,7 +24,7 @@ require_once 'controllers/controllerInscription.php';
       <!-- navbar formulaire-->
           <nav id="navbar2">
             <div class="">
-              <a href="#" class="brand-logo"><img class="logoNav" src="images/logo.png" /></a>
+              <a href="#" class="brand-logo"><img class="logoNav" src="../images/logo.png" /></a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="index.php">Accueil</a></li>
@@ -100,7 +100,7 @@ require_once 'controllers/controllerInscription.php';
         ?></p>
       </div>
     </div>
-      <div class="input-field col S12 l6">
+      <div class="input-field col s12 l6">
         <input class="validate" type="text" id="pseudo" name="pseudo" tabindex="5" value="<?= isset($_POST['pseudo']) ? $_POST['pseudo'] : ''; ?>">
         <label for="pseudo">Pseudo</label>
         <div>
@@ -145,13 +145,25 @@ require_once 'controllers/controllerInscription.php';
       </div>
     </div>
     <div class="row">
+      <div class="col s12">
+        <div class="file-field input-field">
+          <div class="btn grey lighten-1">
+            <span>Image de profil</span>
+            <input type="file">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text" placeholder="Choisissez une image de profil (facultatif)">
+          </div>
+      </div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col s12 center-align">
         <button  id="buttonSend" class="btn waves-effect waves-light yellow darken-3" type="submit" name="action">Envoyer !
           <i class="material-icons right">send</i>
         </button>
       </div>
     </div>
-
   </form>
 </div>
 </div>
@@ -161,7 +173,7 @@ require_once 'controllers/controllerInscription.php';
 <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="../script.js"></script>
 
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Profil</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <!-- materialize -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
@@ -21,7 +21,7 @@
       <!-- navbar profil-->
           <nav id="navbar2">
             <div class="">
-              <a href="#" class="brand-logo"><img class="logoNav" src="images/logo.png" /></a>
+              <a href="#" class="brand-logo"><img class="logoNav" src="../images/logo.png" /></a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="index.php">Accueil</a></li>
@@ -43,7 +43,7 @@
       <div class="container-fluid">
         <div class="row imgbackProfil center-align">
           <div class="col s2">
-            <img src="images/iconprofil.svg" alt="profile image" class="circle z-depth-3 imgprofil">
+            <img src="../images/iconprofil.svg" alt="profile image" class="circle z-depth-3 imgprofil">
             </div>
             <div class="col s3 center-align divTitleProfile">
                 <div class="profiletitle">
@@ -91,7 +91,7 @@
                       <span class="card-title center-align">Profil</span>
                          <div class="row">
                            <div class="col s4">
-                             <img src="images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
+                             <img src="../images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
                            </div>
                            <div class="col s8">
                              <div class="">
@@ -109,12 +109,11 @@
                              <div class="">
                               <p>Mail</p>
                              </div>
-
                            </div>
                          </div>
                       </div>
                       <div class="card-action center-align">
-                        <a href="#">Modifier</a>
+                        <a href="modifUser.php">Modifier</a>
                         <a href="#">Supprimer</a>
                       </div>
                     </div>
@@ -183,19 +182,15 @@
       <ul class="tabs tab-profile z-depth-1 orange lighten-1">
         <li class="tab col s3">
           <a class="white-text waves-effect waves-light active" href="#UpdateStatus">
-            <i class="material-icons">border_color</i>Description</a>
-        </li>
-        <li class="tab col s3">
-          <a class="white-text waves-effect waves-light" href="#AddPhotos">
-            <i class="material-icons">camera_alt</i>Ajouter photo</a>
+           <i class="material-icons">border_color</i>Formulaire</a>
         </li>
       </ul>
       <!-- UpdateStatus-->
-      <div id="UpdateStatus" class="tab-content col s12  grey lighten-4">
+      <form id="UpdateStatus" class="tab-content col s12  grey lighten-4" enctype="multipart/form-data">
         <div class="row contenuformcreate">
           <div class="row">
           <div class="col s2">
-            <img src="images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
+            <img src="../images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
           </div>
           <div class="input-field col s10">
               <input type="text" class="validate" id="" name="title" tabindex="1" value="">
@@ -264,8 +259,21 @@
          </div>
          <div class="row">
           <div class="input-field col s12">
-            <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
+            <textarea id="textarea" class="materialize-textarea"></textarea>
             <label for="textarea" class="">Décrivez votre sortie !</label>
+          </div>
+        </div>
+        <div class="row">
+        <div class="col s12">
+          <div class="file-field input-field">
+                <div class="btn grey lighten-1">
+                  <span>Images</span>
+                  <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Ajouter une ou plusieurs images de votre sortie">
+                </div>
+              </div>
           </div>
         </div>
         <div class="row">
@@ -288,40 +296,9 @@
           </div>
         </div>
       </div>
-      <!-- AddPhotos -->
-      <div id="AddPhotos" class="tab-content col s12  grey lighten-4">
-        <div class="row contenuformcreate">
-          <div class="col s2">
-            <img src="images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
-          </div>
-          <div class="input-field col s10">
-            <textarea id="textarea" row="2" class="materialize-textarea"></textarea>
-            <label for="textarea" class="">Partagez les photos de votre sortie</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 m6 share-icons">
-            <a href="#">
-              <i class="material-icons grey-text text-darken-1">camera_alt</i>
-            </a>
-            <a href="#">
-              <i class="material-icons grey-text text-darken-1">account_circle</i>
-            </a>
-            <a href="#">
-              <i class="material-icons grey-text text-darken-1">keyboard</i>
-              <a href="#">
-                <i class="material-icons grey-text text-darken-1">location_on</i>
-          </div>
-          <div class="col s12 m6 right-align">
-            <!-- Dropdown Trigger -->
-            <a class="waves-effect waves-light btn orange accent-3">
-              <i class="material-icons left">rate_review</i> Ajouter !</a>
-          </div>
-        </div>
-      </div>
       <!-- CreateAlbum -->
 
-    </div>
+    </form>
   </div>
             </div>
         </div>
@@ -363,7 +340,7 @@
 <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="../script.js"></script>
 
 </body>
 </html>

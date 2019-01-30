@@ -23,7 +23,7 @@
     <div class="container-fluid" id="footer2">
       <div id="bottomFooter" class="row">
       <div class="col s6 l4 offset-l7">
-          <a class="grey-text text-lighten-4 right" href="#"><img class="logofooter" src="images/logo.png" /></a>
+          <a class="grey-text text-lighten-4 right" href="#"><img class="logofooter" src="../images/logo.png" /></a>
       </div>
     </div>
     </div>

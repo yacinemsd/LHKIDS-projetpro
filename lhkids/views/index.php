@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>lh kids</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <!-- materialize -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
@@ -73,7 +73,7 @@
       <div class="card center-align z-depth-4" id="card1">
         <span class="card-title titlecard">1. Je m'inscris ! </span>
         <div class="card-image imgcard">
-          <img src="images/inscription.jpg">
+          <img src="../images/inscription.jpg">
         </div>
         <div class="card-content cardContent">
           <p>Simple, rapide et gratuite l'inscription vous permettra d'avoir votre  propre compte LH Kids</p>
@@ -87,7 +87,7 @@
       <div class="card center-align z-depth-3" id="card2">
         <span class="card-title titlecard">2. Je me connecte !</span>
         <div class="card-image imgcard">
-          <img src="images/connexion.png">
+          <img src="../images/connexion.png">
         </div>
         <div class="card-content cardContent">
           <p>Accéder à votre propre compte LH Kids, consulter le contenu partagé par la communauté LH Kids</p>
@@ -101,7 +101,7 @@
       <div class="card center-align z-depth-4" id="card3">
         <span class="card-title titlecard">3. Je partage !</span>
         <div class="card-image imgcard">
-          <img src="images/share.png">
+          <img src="../images/share.png">
         </div>
         <div class="card-content cardContent">
           <p>À votre tour partagez vos sorties et enrichissez le catologue de bons plans sorties LH Kids</p>
@@ -133,6 +133,6 @@ require_once 'footer.php'  // j'inclus a cet endroit mon fichier footer.php
 <!-- footer -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="../script.js"></script>
   </body>
 </html>

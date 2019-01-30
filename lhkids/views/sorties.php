@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Les sorties</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
     <!-- materialize -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
@@ -21,7 +21,7 @@
       <!-- navbar formulaire-->
           <nav id="navbar2">
             <div class="">
-              <a href="#" class="brand-logo"><img class="logoNav" src="images/logo.png" /></a>
+              <a href="#" class="brand-logo"><img class="logoNav" src="../images/logo.png" /></a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="index.php">Accueil</a></li>
@@ -45,7 +45,7 @@
     <div class="col s12">
         <div class="row valign-wrapper topcardSortie">
           <div class="col s1">
-            <img src="images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
+            <img src="../images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
           </div>
           <div class="col s10 valign-wrapper">
             <p class="grey-text text-darken-4 margin">Pseudo </p>
@@ -61,9 +61,9 @@
         <div class="row rowCarousel">
           <div class="col s12 m6 l6">
             <div class="carousel" id="carouselSortie">
-              <a class="carousel-item" href="#one!"><img class="circle z-depth-2" src="images/pix1.jpeg"></a>
-              <a class="carousel-item" href="#two!"><img class="circle z-depth-2" src="images/pix2.jpeg"></a>
-              <a class="carousel-item" href="#three!"><img class="circle z-depth-2" src="images/pix3.jpeg"></a>
+              <a class="carousel-item" href="#one!"><img class="circle z-depth-2" src="../images/pix1.jpeg"></a>
+              <a class="carousel-item" href="#two!"><img class="circle z-depth-2" src="../images/pix2.jpeg"></a>
+              <a class="carousel-item" href="#three!"><img class="circle z-depth-2" src="../images/pix3.jpeg"></a>
             </div>
           </div>
           <div class="col s12 m6 l6 center-align">
@@ -131,7 +131,7 @@
 <!-- scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="../script.js"></script>
 
 </body>
 </html>
