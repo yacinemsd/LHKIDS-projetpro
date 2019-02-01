@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <title>lh kids</title>
-    <link rel="stylesheet" href="../style.css" />
-    <!-- materialize -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-    <!-- fontawesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Galindo" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Slackey" rel="stylesheet">
-  </head>
-    <body>
-      <header>
-    <!-- navbar   -->
-  <?php
-  require_once 'navbar.php'  // j'inclus a cet endroit mon fichier navbar.php contenant ma navbar     ?>
-  <!-- fin navbar       -->
-    </header>
+
     <div class="">
       <h1 class="center-align" id="TitleMention">Mentions Légales LH KIDS</h1>
       <div class="center-align mentionsLegales">
@@ -81,14 +58,3 @@
                 <p>Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
       </div>
     </div>
-
-<!-- footer -->
-<?php
-require_once 'footer.php'  // j'inclus a cet endroit mon fichier footer.php
- ?>
-<!-- footer -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/javascript" src="../script.js"></script>
-  </body>
-</html>
