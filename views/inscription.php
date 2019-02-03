@@ -6,7 +6,7 @@
         <form class="col s12 z-depth-3" id="FormInscription" class="form" action="#" method="POST" role="form">
             <div class="row">
                 <div class="input-field col s12 l4">
-                    <input type="text" class="validate" id="lastname" name="lastname" tabindex="1" value="<?= isset($_POST['firstname']) ? $_POST['firstname'] : ''; ?>">
+                    <input type="text" class="validate" id="lastname" name="lastname" tabindex="1" value="<?= isset($_POST['lastname']) ? $_POST['lastname'] : ''; ?>">
                     <label for="lastname">Nom</label>
                     <div>
                         <p class="inputError"><?php
@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="input-field col s12 l4">
-                    <input type="text" class="validate" id="firstname" name="firstname"  tabindex="2" value="<?= isset($_POST['name']) ? $_POST['name'] : ''; ?>">
+                    <input type="text" class="validate" id="firstname" name="firstname"  tabindex="2" value="<?= isset($_POST['firstname']) ? $_POST['firstname'] : ''; ?>">
                     <label for="firstname">Prénom</label>
                     <div>
                         <p class="inputError"><?php
@@ -29,16 +29,16 @@
                 </div>
 
                 <div class="input-field col s12 l4">
-                    <select>
+                    <select name="selectuser">
                         <option value=" " disabled selected></option>
-                        <option value="1">Papa</option>
-                        <option value="2">Maman</option>
-                        <option value="4">Tonton</option>
-                        <option value="5">Tata</option>
-                        <option value="6">Papi</option>
-                        <option value="7">Mami</option>
-                        <option value="8">Nounou</option>
-                        <option value="9">Autres</option>
+                        <option value="">Papa</option>
+                        <option value="">Maman</option>
+                        <option value="">Tonton</option>
+                        <option value="">Tata</option>
+                        <option value="">Papi</option>
+                        <option value="">Mami</option>
+                        <option value="">Nounou</option>
+                        <option value="">Autres</option>
                     </select>
                     <label>Vous êtes :</label>
                 </div>
@@ -61,8 +61,8 @@
                     <label for="pseudo">Pseudo</label>
                     <div>
                         <p class="inputError"><?php
-                            if (isset($formError['mail'])) {
-                                echo $formError['mail'];
+                            if (isset($formError['pseudo'])) {
+                                echo $formError['pseudo'];
                             }
                             ?></p>
                     </div>

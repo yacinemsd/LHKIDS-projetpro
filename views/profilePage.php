@@ -158,7 +158,7 @@
    </div>
    <div class="row">
      <div class="input-field col s12 m5 l5">
-         <input type="text" class="validate" id="" name="lieu" tabindex="1" value="">
+         <input type="text" class="validate" id="" name="place" tabindex="1" value="">
          <label for="lieu">Lieu de la sortie</label>
      </div>
      <div class="input-field col s4 m4 l3">
@@ -166,18 +166,18 @@
          <label for="date">Date la sortie</label>
      </div>
      <div class="input-field col s4 m4 l2">
-         <input type="text" class="validate timepicker" id="" name="timeDebut" tabindex="1" value="">
+         <input type="text" class="validate timepicker" id="" name="timestart" tabindex="1" value="">
          <label for="timeDebut">Heure de début</label>
      </div>
      <div class="input-field col s4 m4 l2">
-         <input type="text" class="validate timepicker" id="" name="timeFin" tabindex="2" value="">
+         <input type="text" class="validate timepicker" id="" name="timeend" tabindex="2" value="">
          <label for="timeFin">Heure de fin</label>
      </div>
    </div>
    <div class="row">
      <div class="col s6 m3 l3">
        <label>Genre de la sortie : </label>
-        <select>
+       <select name="type">
           <option value="" disabled selected></option>
           <option value="">Sport</option>
           <option value="">Culturelle</option>
@@ -188,7 +188,7 @@
      </div>
      <div class="col s6 m3 l3">
       <label>Environnement : </label>
-       <select>
+      <select name="environment">
          <option value="" disabled selected></option>
          <option value="">Intérieur</option>
          <option value="">Extérieur</option>
@@ -197,7 +197,7 @@
      </div>
      <div class="col s6 m3 l3">
       <label>Tranche d'âge : </label>
-       <select>
+      <select name="age">
          <option value="" disabled selected></option>
          <option value="">Tout âge</option>
          <option value="">1ans et plus</option>
@@ -208,7 +208,7 @@
      </div>
      <div class="col s6 m3 l3">
       <label>Prix : </label>
-       <select>
+      <select name="price">
          <option value="" disabled selected></option>
          <option value="">Gratuit</option>
          <option value="">Payant</option>
@@ -218,7 +218,7 @@
    </div>
    <div class="row">
     <div class="input-field col s12">
-      <textarea id="textarea" class="materialize-textarea"></textarea>
+        <textarea id="textarea" name="description" class="materialize-textarea"></textarea>
       <label for="textarea" class="">Décrivez votre sortie !</label>
     </div>
   </div>
@@ -227,7 +227,7 @@
     <div class="file-field input-field">
           <div class="btn grey lighten-1">
             <span>Images</span>
-            <input type="file" multiple>
+            <input name="image" type="file" multiple>
           </div>
           <div class="file-path-wrapper">
             <input class="file-path validate" type="text" placeholder="Ajouter une ou plusieurs images de votre sortie">

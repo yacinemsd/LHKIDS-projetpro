@@ -7,7 +7,8 @@ if (isset($_POST['submitCreateUser'])) {
 //    echo '<pre>';
 //    print_r($_POST);
 //    exit;
-    $regexname = '/^[a-zA-ZÀ-ÿ]+$/';
+//    $regexname = '/^[a-zA-ZÀ-ÿ]+$/';
+    $regexname = '/^[A-zÀ-ÿ\' -]+$/';
     $regexPseudo = '/^[0-9a-zA-ZÂ-ÿ\-._]+$/';
 
     global $formError; // je déclare formError en tableau
@@ -27,16 +28,22 @@ if (isset($_POST['submitCreateUser'])) {
         if (!preg_match($regexname, $firstname)) { //si ca ne match pas j'envoi le msg d'erreur
             $formError['firstname'] = 'erreur syntaxe';
         }
-        if (empty($_POST['$firstname'])) {
+        if (empty($firstname)) {
             $formError['firstname'] = 'le champ est vide';
+        }
+    }
+        if (isset($_POST['selectuser'])) {
+        $selectuser = $_POST['selectuser']; //je declare que la variable firstname = à l'input firstname en excluant tout caractère spécial avec htmlspecialchars qui va convertir toute balise ou autre en caractère
+        if (empty($selectuser)) {
+            $formError['selectuser'] = 'le champ est vide';
         }
     }
     if (isset($_POST['mail'])) {
         $mail = $_POST['mail']; //
-        if (!filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) { //si ca ne match pas j'envoi le msg d'erreur
+        if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) { //si ca ne match pas j'envoi le msg d'erreur
             $formError['mail'] = 'format mail incorrect';
         }
-        if (empty($_POST['mail'])) {
+        if (empty($mail)) {
             $formError['mail'] = 'le champ est vide';
         }
     }
@@ -45,7 +52,7 @@ if (isset($_POST['submitCreateUser'])) {
         if (!preg_match($regexPseudo, $pseudo)) { //si ca ne match pas j'envoi le msg d'erreur
             $formError['pseudo'] = 'erreur syntaxe';
         }
-        if (empty($_POST['pseudo'])) {
+        if (empty($pseudo)) {
             $formError['pseudo'] = 'le champ est vide';
         }
     }
@@ -66,7 +73,7 @@ if (isset($_POST['submitCreateUser'])) {
     }
     if (isset($_POST['reasons'])) {
         $reasons = $_POST['reasons'];
-        if (empty($_POST['reasons'])) {
+        if (empty($reasons)) {
             $formError['reasons'] = 'le champ est vide';
         }
     }

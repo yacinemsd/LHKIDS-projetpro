@@ -15,7 +15,7 @@ function createUser() {
             $user->pseudo->$_POST['pseudo'];
             $user->password->$_POST['password'];
             $user->reasons->$_POST['reasons'];
-            $user->userType_id->$_POST['userType_id'];
+            $user->userType_id->$_POST['selectuser'];
 
             $User->createUser();
         }
