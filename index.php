@@ -19,7 +19,14 @@ if (isset($_GET['page'])) {
         view('sorties.php');
     } elseif ($_GET['page'] == 'modifuser') {
         view('modifUser.php');
-    } else {
+    }
+     elseif ($_GET['page'] == 'home') {
+        view('home.php');
+    }
+    elseif ($_GET['page'] == 'typesuser') {
+        require 'controllers/typeController.php';
+        createType();
+    }else {
         view('error404.php');
     }
 } else {

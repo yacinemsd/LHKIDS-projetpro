@@ -1,35 +1,35 @@
 <?php
-class User extends database {
+class User extends Database {
 
-  public $id;  // je déclare les collonnes de ma table en variable pour les réutiliser
-  public $lastname;
-  public $firstname;
-  public $mail;
-  public $pseudo;
-  public $password;
-  public $reasons;
+  public $user_id;  // je déclare les collonnes de ma table en variable pour les réutiliser
+  public $user_lastname;
+  public $user_firstname;
+  public $user_mail;
+  public $user_pseudo;
+  public $user_password;
+  public $user_reasons;
   public $userType_id;
 
   public function createUser(){
     $database = $this->database; // Je stocke ma class database( donc la connexion a la bdd) dans une variable database
     
-    $query = 'INSERT INTO `user`'
-            . 'SET `lastname` = :lastname'
-            . '`firstname` = :firstname'
-            . '`mail` = :mail'
-            . '`pseudo` = :pseudo'
-            . '`password` = :password'
-            . '`reasons` = :reasons'
+    $query = 'INSERT INTO `user` '
+            . 'SET `user_lastname` = :user_lastname, '
+            . '`user_firstname` = :user_firstname, '
+            . '`user_mail` = :user_mail, '
+            . '`user_pseudo` = :user_pseudo, '
+            . '`user_password` = :user_password, '
+            . '`user_reasons` = :user_reasons, '
             . '`userType_id` = :userType_id';
     
     $createUser = $database->prepare($query); // je stocke dans createUser la preparation de la requete avec la connexion a la bdd
     //j'attribue les valeurs des attributs nominatifs (hydratation)
-    $createUser->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
-    $createUser->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
-    $createUser->bindValue(':mail', $this->mail, PDO::PARAM_STR);
-    $createUser->bindValue(':pseudo', $this->pseudo, PDO::PARAM_STR);
-    $createUser->bindValue(':password', $this->password, PDO::PARAM_STR);
-    $createUser->bindValue(':lastname', $this->reasons, PDO::PARAM_STR);
+    $createUser->bindValue(':user_lastname', $this->lastname, PDO::PARAM_STR);
+    $createUser->bindValue(':user_firstname', $this->firstname, PDO::PARAM_STR);
+    $createUser->bindValue(':user_mail', $this->mail, PDO::PARAM_STR);
+    $createUser->bindValue(':user_pseudo', $this->pseudo, PDO::PARAM_STR);
+    $createUser->bindValue(':user_password', $this->password, PDO::PARAM_STR);
+    $createUser->bindValue(':user_reasons', $this->reasons, PDO::PARAM_STR);
     $createUser->bindValue(':userType_id', $this->userType_id, PDO::PARAM_INT);
     
      return $createUser->execute(); // j'éxécute la requête

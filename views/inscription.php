@@ -29,16 +29,23 @@
                 </div>
 
                 <div class="input-field col s12 l4">
-                    <select name="selectuser">
-                        <option value=" " disabled selected></option>
-                        <option value="">Papa</option>
-                        <option value="">Maman</option>
-                        <option value="">Tonton</option>
-                        <option value="">Tata</option>
-                        <option value="">Papi</option>
-                        <option value="">Mami</option>
-                        <option value="">Nounou</option>
-                        <option value="">Autres</option>
+                    <select name="selectuser">                      
+                        <option value="" disabled selected></option>
+                        <?php
+                        foreach ($type as $value) {
+                            ?>
+                            <option value="<?=$value->userType_id?>"><?=$value->userType_type?></option>                           
+                                                       
+<!--                        <option value="<?=$value->userType_id?>">Papa</option>
+                            <option value="<?=$value->userType_id?>">Maman</option>
+                            <option value="<?=$value->userType_id?>">Tonton</option>
+                            <option value="<?=$value->userType_id?>">Tata</option>
+                            <option value="<?=$value->userType_id?>">Papi</option>
+                            <option value="<?=$value->userType_id?>">Mami</option>
+                            <option value="<?=$value->userType_id?>">Nounou</option>
+                            <option value="<?=$value->userType_id?>">Autres</option>-->
+                        <?php }
+                        ?>
                     </select>
                     <label>Vous êtes :</label>
                 </div>
@@ -46,14 +53,14 @@
 
             <div class="row">
                 <div class="input-field col  s12 l6">
-                    <input  class="validate" type="email"  id="email" name="email" tabindex="4" value="<?= isset($_POST['email']) ? $_POST['email'] : ''; ?>" > <!-- si $_POST['email'] existe je l'affiche sinon(?) j'affiche $_POST['email'] avec une chaine de caractère vide. -->
-                    <label for="email">Adresse Mail</label>
+                    <input  class="validate" type="email"  id="mail" name="mail" tabindex="4" value="<?= isset($_POST['email']) ? $_POST['email'] : ''; ?>" > <!-- si $_POST['email'] existe je l'affiche sinon(?) j'affiche $_POST['email'] avec une chaine de caractère vide. -->
+                    <label for="mail">Adresse Mail</label>
                     <div>
                         <p class="inputError"><?php
-                            if (isset($formError['mail'])) {
-                                echo $formError['mail'];
-                            }
-                            ?></p>
+                        if (isset($formError['mail'])) {
+                            echo $formError['mail'];
+                        }
+                        ?></p>
                     </div>
                 </div>
                 <div class="input-field col s12 l6">
@@ -64,7 +71,7 @@
                             if (isset($formError['pseudo'])) {
                                 echo $formError['pseudo'];
                             }
-                            ?></p>
+                        ?></p>
                     </div>
                 </div>
             </div>
@@ -77,7 +84,7 @@
                             if (isset($formError['password'])) {
                                 echo $formError['password'];
                             }
-                            ?></p>
+                        ?></p>
                     </div>
                 </div>
                 <div class="input-field col s12 l6">
@@ -88,7 +95,7 @@
                             if (isset($formError['confirm'])) {
                                 echo $formError['confirm'];
                             }
-                            ?></p>
+                        ?></p>
                     </div>
                 </div>
             </div>
