@@ -1,4 +1,5 @@
 <?php
+session_start();
 $formError = [];
 require 'App/Functions.php';
 require 'Models/DataBase.php';
@@ -7,7 +8,9 @@ require 'Models/DataBase.php';
 
 if (isset($_GET['page'])) {
     if ($_GET['page'] == 'connexion') {
-        view('connexion.php'); //je fais appels a ma fonction view avec en paramètres la page content à chargé
+        require 'controllers/userController.php';
+        userConnexion();
+         //je fais appels a ma fonction view avec en paramètres la page content à chargé
     } elseif ($_GET['page'] == 'inscription') {
         require 'controllers/userController.php';
         createUser(); // je fais appel a la fonction sui contient ma vue

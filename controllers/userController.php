@@ -9,21 +9,49 @@ function createUser() {
     if (isset($_POST['submitCreateUser'])) {
         require 'formRules/UserFormRules.php'; //vérifs inputs formulaire
         
-        if ($formValid) {
+        if ($formValidRegistration) {
             $User = new User(); //j'instancie un nouvelle objet User qui bénéficie des meme attributs de la class User
             $User->lastname = $_POST['lastname']; // je fais le liens entre chasue attribut de la class et l'input du formulaire avec un POST
             $User->firstname = $_POST['firstname']; //j'hydrate mes valeurs
             $User->mail = $_POST['mail'];
             $User->pseudo = $_POST['pseudo'];
-            $User->password = $_POST['password'];
+            $User->password = password_hash($_POST['password'], PASSWORD_DEFAULT); // cript du passsword à l'inscription
             $User->reasons = $_POST['reasons'];
             $User->userType_id = $_POST['selectuser'];
-
             $User->createUser();
+            header('Location: index.php?page=connexion&inscription');
+            exit();
         }
         
     }
     $userType = new UserType();
     $type = $userType->getType();
     view('inscription.php', ['type'=>$type]);
+}
+    
+function userConnexion(){
+    require 'formRules/ConnexionFormRules.php';
+    $sentencePasswordIncorrect = '';
+     
+    if(isset($_POST['submitConnexion'])) {
+        if($formValidConnexion){
+            $User = new User();
+            $User->user_pseudo = $_POST['pseudo'];
+            $getUser = $User->getUserInformations();
+            if(isset($getUser) && $getUser != FALSE) {
+                if (password_verify($_POST['password'], $getUser->user_password)){
+                    $_SESSION['pseudo'] = $getUser->user_pseudo;
+                    $_SESSION['mail'] = $getUser->user_mail;
+                    var_dump($_SESSION['pseudo']);
+                }
+                else {
+                    $sentencePasswordIncorrect = 'Mot de passe incorrect';
+                }
+            }
+            else {
+                echo 'nul';
+            }
+        }
+    }
+    view('connexion.php', ['passwordIncorrect' => $sentencePasswordIncorrect]);
 }

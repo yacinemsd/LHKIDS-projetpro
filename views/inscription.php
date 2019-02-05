@@ -27,7 +27,6 @@
                             ?></p>
                     </div>
                 </div>
-
                 <div class="input-field col s12 l4">
                     <select name="selectuser">                      
                         <option value="" disabled selected></option>
@@ -77,7 +76,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12 l6">
-                    <input class="validate" type="text" id="password" name="password" tabindex="6" value="<?= isset($_POST['password']) ? $_POST['password'] : ''; ?>">
+                    <input class="validate" type="password" id="password" name="password" tabindex="6" value="<?= isset($_POST['password']) ? $_POST['password'] : ''; ?>">
                     <label for="password">Mot de passe</label>
                     <div>
                         <p class="inputError"><?php
@@ -88,7 +87,7 @@
                     </div>
                 </div>
                 <div class="input-field col s12 l6">
-                    <input class="validate" type="text" id="confirm" name="confirm" tabindex="6" value="<?= isset($_POST['confirm']) ? $_POST['confirm'] : ''; ?>">
+                    <input class="validate" type="password" id="confirm" name="confirm" tabindex="6" value="<?= isset($_POST['confirm']) ? $_POST['confirm'] : ''; ?>">
                     <label for="confirm">Confirmez votre mot de passe</label>
                     <div>
                         <p class="inputError"><?php

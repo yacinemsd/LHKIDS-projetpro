@@ -3,9 +3,9 @@
     <div class="row z-depth-4" id="fondHeader">
       <div class="col s5 m6 l3">
         <div class="collection" id="menu1">
-        <a href="#title1" class="collection-item">Accueil</a>
-        <a href="sorties.php" class="collection-item">Les Bons plans sorties !</a>
-        <a href="profilPage.php" class="collection-item">Je partage !</a>
+        <a href="index.php?page=home" class="collection-item">Accueil</a>
+        <a href="index.php?page=sorties" class="collection-item">Les Bons plans sorties !</a>
+        <a href="index.php?page=profil" class="collection-item">Je partage !</a>
         <a href="#!" class="collection-item">Contact</a>
       </div>
     </div>
@@ -56,7 +56,7 @@
           <p>Simple, rapide et gratuite l'inscription vous permettra d'avoir votre  propre compte LH Kids</p>
         </div>
         <div class="card-action" id="cardLink">
-          <a href="inscription.php">Je m'inscris !</a>
+          <a href="index.php?page=inscription">Je m'inscris !</a>
         </div>
       </div>
     </div>
@@ -70,7 +70,7 @@
           <p>Accéder à votre propre compte LH Kids, consulter le contenu partagé par la communauté LH Kids</p>
         </div>
         <div class="card-action" id="cardLink">
-          <a href="connexion.php">Me connecter</a>
+          <a href="index.php?page=connexion">Me connecter</a>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@
           <p>À votre tour partagez vos sorties et enrichissez le catologue de bons plans sorties LH Kids</p>
         </div>
         <div class="card-action" id="cardLink">
-          <a href="#">Je partage !</a>
+          <a href="index.php?page=profil">Je partage !</a>
         </div>
       </div>
     </div>

@@ -1,9 +1,8 @@
 <!-- vérifications sur les input du formulaire -->
 
 <?php
-$formValid = FALSE;
+$formValidRegistration = FALSE;
 
-if (isset($_POST['submitCreateUser'])) {
 //    echo '<pre>';
 //    print_r($_POST);
 //    exit;
@@ -46,6 +45,7 @@ if (isset($_POST['submitCreateUser'])) {
         if (empty($mail)) {
             $formError['mail'] = 'le champ est vide';
         }
+        
     }
     if (isset($_POST['pseudo'])) {
         $pseudo = $_POST['pseudo'];
@@ -78,7 +78,6 @@ if (isset($_POST['submitCreateUser'])) {
         }
     }
     if (count($formError) == 0) { // si je n'ai aucune erreurs j'hydrate mes valeurs en précisant que chaque colonne 
-        $formValid = TRUE;
+        $formValidRegistration = TRUE;
     }
-}
 

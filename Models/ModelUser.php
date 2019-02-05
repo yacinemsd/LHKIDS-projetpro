@@ -32,10 +32,19 @@ class User extends Database {
     $createUser->bindValue(':user_reasons', $this->reasons, PDO::PARAM_STR);
     $createUser->bindValue(':userType_id', $this->userType_id, PDO::PARAM_INT);
     
-     return $createUser->execute(); // j'éxécute la requête
-   
-             
+     return $createUser->execute(); // j'éxécute la requête     
   }
-
+  
+  public function getUserInformations(){
+     $database = $this->database;
+     
+     $query = 'SELECT * FROM `user`'
+             . 'WHERE `user_pseudo` = :user_pseudo';
+     
+     $getUserInformations = $database->prepare($query);
+     $getUserInformations->bindValue(':user_pseudo', $this->user_pseudo, PDO::PARAM_STR);
+     $getUserInformations->execute();
+     return $getUserInformations->fetch(PDO::FETCH_OBJ);
+  } 
 }
- ?>
+ 
