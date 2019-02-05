@@ -6,10 +6,10 @@
       </div>
       <div class="col s3 center-align divTitleProfile">
           <div class="profiletitle">
-              <p>Yacine</p>
+              <p><?= $_SESSION['userInfos']->user_firstname; ?></p>
           </div>
           <div class="profiletitle2">
-               <p>Papa</p>
+               <p><?= $_SESSION['userInfos']->userType_type; ?></p>
          </div>
       </div>
       <div class="col s3 center-align divTitleProfile">
@@ -54,19 +54,19 @@
                      </div>
                      <div class="col s8">
                        <div class="">
-                        <p>Nom</p>
+                        <p><?= $_SESSION['userInfos']->user_lastname; ?></p>
                        </div>
                        <div class="">
-                        <p>Prénom</p>
+                        <p><?= $_SESSION['userInfos']->user_firstname; ?></p>
                        </div>
                        <div class="">
-                        <p>Pseudo</p>
+                        <p><?= $_SESSION['userInfos']->user_pseudo ?></p>
                        </div>
                        <div class="">
-                        <p>Papa...</p>
+                        <p><?= $_SESSION['userInfos']->userType_type; ?></p>
                        </div>
                        <div class="">
-                        <p>Mail</p>
+                        <p><?= $_SESSION['userInfos']->user_mail; ?></p>
                        </div>
                      </div>
                    </div>

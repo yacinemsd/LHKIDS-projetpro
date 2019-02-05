@@ -40,9 +40,7 @@ function userConnexion(){
             $getUser = $User->getUserInformations();
             if(isset($getUser) && $getUser != FALSE) {
                 if (password_verify($_POST['password'], $getUser->user_password)){
-                    $_SESSION['pseudo'] = $getUser->user_pseudo;
-                    $_SESSION['mail'] = $getUser->user_mail;
-                    var_dump($_SESSION['pseudo']);
+                    $_SESSION['userInfos'] = $getUser;
                 }
                 else {
                     $sentencePasswordIncorrect = 'Mot de passe incorrect';

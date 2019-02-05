@@ -39,6 +39,8 @@ class User extends Database {
      $database = $this->database;
      
      $query = 'SELECT * FROM `user`'
+             . 'INNER JOIN `userType`'
+             . 'ON `user`.`userType_id` = `userType`.`userType_id`'
              . 'WHERE `user_pseudo` = :user_pseudo';
      
      $getUserInformations = $database->prepare($query);
