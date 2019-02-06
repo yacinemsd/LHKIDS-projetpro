@@ -39,8 +39,10 @@ class User extends Database {
      $database = $this->database;
      
      $query = 'SELECT * FROM `user`'
-             . 'INNER JOIN `userType`'
-             . 'ON `user`.`userType_id` = `userType`.`userType_id`'
+             . 'INNER JOIN `userType`, '
+             . 'ON `user`.`userType_id` = `userType`.`userType_id`, '
+             . 'INNER JOIN `images`, '
+             . 'ON `user`.`user_id` = `images`.`user_id`, '
              . 'WHERE `user_pseudo` = :user_pseudo';
      
      $getUserInformations = $database->prepare($query);
@@ -48,5 +50,19 @@ class User extends Database {
      $getUserInformations->execute();
      return $getUserInformations->fetch(PDO::FETCH_OBJ);
   } 
+  
+  public function updateUser() {
+      $database = $this->database;
+      
+      $query = 'UPDATE `user`'
+              . 'SET `user_firstname` = :user_firstname, '
+              . '`user_lastname` = :user_lastname, '
+              . '`user_firstname` = :user_firstname, '
+              . '`userType_id` = :userType_id, '
+              . '`user_pseudo` = :user_pseudo, '
+              . '`user_password` = :user_password, '
+              . '`user_reasons` = :user_reasons';
+            
+  }
 }
  

@@ -19,5 +19,5 @@ class UserType extends Database {
         $createType->bindValue(':userType_type', $this->userType_type, PDO::PARAM_STR);
         return $createType->execute();
     }
-
+    
 }

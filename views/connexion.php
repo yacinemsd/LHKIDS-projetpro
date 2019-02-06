@@ -1,4 +1,5 @@
 <p class="center-align green lighten-2"><?= isset($_GET['inscription']) ? 'Le compte a bien été créé' : '' ?></p>
+<p class="center-align orange"><?= isset($_SESSION['noConnexion']) ? $_SESSION['noConnexion'] : ''; ?></p>
 <div class="container">
   <div class="row">
     <h1 class="center-align" id="formTitle">Espace de connexion</h1>
@@ -11,7 +12,7 @@
       </div><!--fin input pseudo-->
       <div class="row"><!--row mot de passe-->
         <div class="input-field col s12">
-          <input type="text" class="validate" id="password" name="password" tabindex="2" value="">
+          <input type="password" class="validate" id="password" name="password" tabindex="2" value="">
           <label for="password">Mot de passe</label>
           <p><?= isset($passwordIncorrect) ? $passwordIncorrect : '' ?></p>
         </div>

@@ -1,4 +1,10 @@
 <!-- profile-page-header -->
+<?php 
+if(!isset($_SESSION['userInfos'])){
+    header('Location: index.php?page=connexion');
+    $_SESSION['noConnexion']='Veuillez vous connecter pour accéder à votre profil';
+}
+?>
 <div class="container-fluid">
   <div class="row imgbackProfil center-align">
     <div class="col s2">
@@ -54,25 +60,25 @@
                      </div>
                      <div class="col s8">
                        <div class="">
-                        <p><?= $_SESSION['userInfos']->user_lastname; ?></p>
+                        <p class="fontInfouser"><?= $_SESSION['userInfos']->user_lastname; ?></p>
                        </div>
                        <div class="">
-                        <p><?= $_SESSION['userInfos']->user_firstname; ?></p>
+                        <p class="fontInfouser"><?= $_SESSION['userInfos']->user_firstname; ?></p>
                        </div>
                        <div class="">
-                        <p><?= $_SESSION['userInfos']->user_pseudo ?></p>
+                        <p class="fontInfouser"><?= $_SESSION['userInfos']->user_pseudo ?></p>
                        </div>
                        <div class="">
-                        <p><?= $_SESSION['userInfos']->userType_type; ?></p>
+                        <p class="fontInfouser"><?= $_SESSION['userInfos']->userType_type; ?></p>
                        </div>
                        <div class="">
-                        <p><?= $_SESSION['userInfos']->user_mail; ?></p>
+                        <p class="fontInfouser"><?= $_SESSION['userInfos']->user_mail; ?></p>
                        </div>
                      </div>
                    </div>
                 </div>
                 <div class="card-action center-align">
-                  <a href="modifUser.php">Modifier</a>
+                  <a href="index.php?page=modifuser">Modifier</a>
                   <a href="#">Supprimer</a>
                 </div>
               </div>
