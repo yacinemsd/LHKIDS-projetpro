@@ -384,5 +384,6 @@ a {
     text-shadow: 5px 5px 5px #000000;
 }
 .fontInfouser{
-   font-family: 'Slackey', cursive; 
+   font-family: monospace;
+   color: blue;
 }

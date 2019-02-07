@@ -6,7 +6,6 @@ require 'App/Functions.php';
 require 'Models/DataBase.php';
 
 
-
 if (isset($_GET['page'])) {
     if ($_GET['page'] == 'connexion') {
         require 'controllers/userController.php';
@@ -14,7 +13,7 @@ if (isset($_GET['page'])) {
         //je fais appels a ma fonction view avec en paramètres la page content à chargé
     } elseif ($_GET['page'] == 'inscription') {
         require 'controllers/userController.php';
-        createUser(); // je fais appel a la fonction sui contient ma vue
+        createUser(); // je fais appel a la fonction qui contient ma vue
     } elseif ($_GET['page'] == 'mentionslegales') {
         view('mentionsLegales.php');
     } elseif ($_GET['page'] == 'profil') {
@@ -24,7 +23,7 @@ if (isset($_GET['page'])) {
         view('sorties.php');
     } elseif ($_GET['page'] == 'modifuser') {
         require 'controllers/userController.php';
-        view('modifUser.php');
+        userUpdate();
     } elseif ($_GET['page'] == 'home') {
         view('home.php');
     } elseif ($_GET['page'] == 'deconnexion') {

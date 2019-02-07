@@ -35,14 +35,6 @@
                             ?>
                             <option value="<?=$value->userType_id?>"><?=$value->userType_type?></option>                           
                                                        
-<!--                        <option value="<?=$value->userType_id?>">Papa</option>
-                            <option value="<?=$value->userType_id?>">Maman</option>
-                            <option value="<?=$value->userType_id?>">Tonton</option>
-                            <option value="<?=$value->userType_id?>">Tata</option>
-                            <option value="<?=$value->userType_id?>">Papi</option>
-                            <option value="<?=$value->userType_id?>">Mami</option>
-                            <option value="<?=$value->userType_id?>">Nounou</option>
-                            <option value="<?=$value->userType_id?>">Autres</option>-->
                         <?php }
                         ?>
                     </select>
