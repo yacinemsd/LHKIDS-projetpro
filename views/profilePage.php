@@ -39,7 +39,8 @@ if (!isset($_SESSION['userInfos'])) {
         </div>
     </div>
 </div>
-</div>
+<p class="green center-align"><?= isset($_SESSION['modifOk']) ? $_SESSION['modifOk'] : ''; ?></p>
+
 
 <!--/ profile-page-header -->
 <div class="container-fluid">
@@ -81,8 +82,10 @@ if (!isset($_SESSION['userInfos'])) {
                         </div>
                     </div>
                     <div class="card-action center-align">
-                        <a href="index.php?page=modifuser">Modifier</a>
-                        <a href="#">Supprimer</a>
+                        <form action="" method="POST">
+                            <a href="index.php?page=modifuser">Modifier</a>
+                            <button class="waves-effect waves-light btn yellow darken-3 center-align" name="submitDelete">Supprimer</button>
+                        </form>
                     </div>
                 </div>
             </div>

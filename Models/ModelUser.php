@@ -26,7 +26,7 @@ class User extends Database {
         $createUser = $database->prepare($query); // je stocke dans createUser la preparation de la requete avec la connexion a la bdd
         //j'attribue les valeurs des attributs nominatifs (hydratation)
         $createUser->bindValue(':user_lastname', $this->user_lastname, PDO::PARAM_STR);
-        $createUser->bindValue(':user_firstname', $this->userfirstname, PDO::PARAM_STR);
+        $createUser->bindValue(':user_firstname', $this->user_firstname, PDO::PARAM_STR);
         $createUser->bindValue(':user_mail', $this->user_mail, PDO::PARAM_STR);
         $createUser->bindValue(':user_pseudo', $this->user_pseudo, PDO::PARAM_STR);
         $createUser->bindValue(':user_password', $this->user_password, PDO::PARAM_STR);
@@ -79,5 +79,14 @@ class User extends Database {
 
         return $updateUser->execute();
     }
-
+    
+    public function deleteUser(){
+        $database = $this->database;    
+        $query= 'DELETE FROM `user` '
+                . 'WHERE `user_id` = :user_id';
+       
+        $deleteUser = $database->prepare($query);
+        $deleteUser->bindvalue(':user_id', $this->user_id, PDO::PARAM_INT);        
+        return $deleteUser->execute();      
+    }
 }

@@ -18,7 +18,7 @@ if (isset($_GET['page'])) {
         view('mentionsLegales.php');
     } elseif ($_GET['page'] == 'profil') {
         require 'controllers/userController.php';
-        view('profilePage.php');
+        deleteUser();
     } elseif ($_GET['page'] == 'sorties') {
         view('sorties.php');
     } elseif ($_GET['page'] == 'modifuser') {

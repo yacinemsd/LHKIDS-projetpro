@@ -12,7 +12,7 @@ function createUser() {
             $User = new User(); //j'instancie un nouvelle objet User qui bénéficie des meme attributs de la class User
             $User->user_lastname = $_POST['lastname']; // je fais le liens entre chasue attribut de la class et l'input du formulaire avec un POST
             $User->user_firstname = $_POST['firstname']; //j'hydrate mes valeurs
-            $User->usermail = $_POST['mail'];
+            $User->user_mail = $_POST['mail'];
             $User->user_pseudo = $_POST['pseudo'];
             $User->user_password = password_hash($_POST['password'], PASSWORD_DEFAULT); // cript du passsword à l'inscription
             $User->user_reasons = $_POST['reasons'];
@@ -76,11 +76,23 @@ function userUpdate() {
             $User->user_reasons = $_POST['reasons'];
             $User->user_id = $_SESSION['userInfos']->user_id;
             $User->updateUser();
-            echo 'Vos modifications ont bien été prises en compte';
-//            header('Location: index.php?page=connexion&inscription');
+            $_SESSION['modifOk'] = 'Vos modifications ont bien été prises en compte';
+            header('Location: index.php?page=profil');
+            exit();
         }
     }
     $userType = new UserType();
     $type = $userType->getType();
     view('modifUser.php', ['type' => $type]);
+}
+
+function deleteUser(){
+    if(isset($_POST['submitDelete'])){
+        
+        $User = new User();
+        $User->user_id = $_SESSION['userInfos']->user_id;
+        $User->deleteUser();
+        echo 'supression ok';
+    }
+    view('profilePage.php');
 }
