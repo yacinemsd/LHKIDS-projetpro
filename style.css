@@ -387,3 +387,18 @@ a {
    font-family: monospace;
    color: blue;
 }
+/*css alert update*/
+.card{
+    background: linear-gradient(45deg, rgb(67, 160, 71), rgb(29, 233, 182));
+}
+
+.card-alert > .close {
+    cursor : pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #fff;
+    border: none;
+    background: 0 0;
+}

@@ -21,7 +21,7 @@
   </div>
 </div>
     </header>
-
+<p class="orange center-align"><?= isset($_SESSION['deleteuserOk']) ? $_SESSION['deleteuserOk'] : ''; ?></p>
     <!-- presentation -->
 <div class="container-fluid">
   <div class="row">

@@ -76,7 +76,9 @@ function userUpdate() {
             $User->user_reasons = $_POST['reasons'];
             $User->user_id = $_SESSION['userInfos']->user_id;
             $User->updateUser();
-            $_SESSION['modifOk'] = 'Vos modifications ont bien été prises en compte';
+            $getUser = $User->getUserInformations();
+            $_SESSION['userInfos'] = $getUser;
+            $_SESSION['modifok'] = true;
             header('Location: index.php?page=profil');
             exit();
         }
@@ -92,7 +94,9 @@ function deleteUser(){
         $User = new User();
         $User->user_id = $_SESSION['userInfos']->user_id;
         $User->deleteUser();
-        echo 'supression ok';
+        $_SESSION['deleteuserOk'] = 'Votre compte a bien été supprimé';
+        header('Location:index.php?page=home');
+        exit();
     }
     view('profilePage.php');
 }

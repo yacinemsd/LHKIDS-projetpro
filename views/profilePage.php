@@ -39,9 +39,22 @@ if (!isset($_SESSION['userInfos'])) {
         </div>
     </div>
 </div>
-<p class="green center-align"><?= isset($_SESSION['modifOk']) ? $_SESSION['modifOk'] : ''; ?></p>
-
-
+<?php if (isset($_SESSION['modifok'])) { // si ma variable modif ok existe j'affiche mon alert ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col l4 offset-l7">
+                <div class="card-alert card">
+                    <div class="card-content white-text">
+                        <p>Vos modifications on été faites avec succès</p>
+                    </div>
+                    <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } unset($_SESSION['modifok']); // je détruit aussitot la variable modif ok avec unset ?>
 <!--/ profile-page-header -->
 <div class="container-fluid">
     <div class="row">
@@ -84,7 +97,18 @@ if (!isset($_SESSION['userInfos'])) {
                     <div class="card-action center-align">
                         <form action="" method="POST">
                             <a href="index.php?page=modifuser">Modifier</a>
-                            <button class="waves-effect waves-light btn yellow darken-3 center-align" name="submitDelete">Supprimer</button>
+                            <button class="waves-effect waves-light btn yellow darken-3 center-align modal-trigger"  href="#modal1">Supprimer</button>  <!-- Modal Structure -->
+                            <!-- Modal-->
+                            <div id="modal1" class="modal center-align">
+                                <div class="modal-content">
+                                    <h4>Modal Header</h4>
+                                    <p>A bunch of text</p>
+                                </div>
+                                <div class="modal-footer center-align">
+                                    <button href="#!" class="modal-close waves-effect waves-green btn-flat" name="submitDelete">Supprimer mon compte</button>
+                                    <button href="#!" class="modal-close waves-effect waves-green btn-flat">Annuler</button>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -257,23 +281,26 @@ if (!isset($_SESSION['userInfos'])) {
                                                 </a>
                                                 <a href="#">
                                                     <i class="material-icons grey-text text-darken-1">keyboard</i>
-                                                    <a href="#">
-                                                        <i class="material-icons grey-text text-darken-1">location_on</i>
-                                                        </div>
-                                                        <div class="col s12 m6 right-align">
-                                                            <!-- Dropdown Trigger -->
-                                                            <a class="waves-effect waves-light btn orange accent-3">
-                                                                <i class="material-icons left">rate_review</i> Publier !</a>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        <!-- CreateAlbum -->
-
-                                                        </form>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        </div>
-                                                        </div>
+                                                </a>
+                                                <a href="#">
+                                                    <i class="material-icons grey-text text-darken-1">location_on</i>
+                                                </a>
+                                            </div>
+                                            <div class="col s12 m6 right-align">
+                                                <!-- Dropdown Trigger -->
+                                                <a class="waves-effect waves-light btn orange accent-3">
+                                                    <i class="material-icons left">rate_review</i> Publier !
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
