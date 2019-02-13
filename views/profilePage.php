@@ -2,7 +2,7 @@
 <?php
 if (!isset($_SESSION['userInfos'])) {
     header('Location: index.php?page=connexion');
-    $_SESSION['noConnexion'] = 'Veuillez vous connecter pour accéder à votre profil';
+    $_SESSION['noConnexion'] = true;
 }
 ?>
 <div class="container-fluid">
@@ -43,9 +43,10 @@ if (!isset($_SESSION['userInfos'])) {
     <div class="container-fluid">
         <div class="row">
             <div class="col l4 offset-l7">
-                <div class="card-alert card">
+                <div class="card-alert card gradient-45deg-cyan-light-green">
                     <div class="card-content white-text">
-                        <p>Vos modifications on été faites avec succès</p>
+                        <p><i class="material-icons">check</i>
+                            Vos modifications on été faites avec succès</p>
                     </div>
                     <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">×</span>
@@ -68,27 +69,27 @@ if (!isset($_SESSION['userInfos'])) {
                 <div id="profilecard" class="card z-depth-3">
                     <div class="card-content white-text">
                         <span class="card-title center-align">Profil</span>
-                        <div class="row">
+                        <div class="row infosprofil1">
                             <div class="col s4">
                                 <img src="../images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
                             </div>
-                            <div class="col s8">
-                                <div class="">
+                            <div class="col s7 offset-l1">
+                                <div class="row">
                                     <p class="fontInfouser">Nom :  <?= $_SESSION['userInfos']->user_lastname; ?></p>
                                 </div>
-                                <div class="">
+                                <div class="row">
                                     <p class="fontInfouser">Prénom :  <?= $_SESSION['userInfos']->user_firstname; ?></p>
                                 </div>
-                                <div class="">
+                                <div class="row">
                                     <p class="fontInfouser">Pseudo :  <?= $_SESSION['userInfos']->user_pseudo ?></p>
                                 </div>
-                                <div class="">
+                                <div class="row">
                                     <p class="fontInfouser">Vous êtes :  <?= $_SESSION['userInfos']->userType_type; ?></p>
                                 </div>
-                                <div class="">
+                                <div class="row">
                                     <p class="fontInfouser">Mail :  <?= $_SESSION['userInfos']->user_mail; ?></p>
                                 </div>
-                                <div class="">
+                                <div class="row">
                                     <p class="fontInfouser">Raison de l'inscription :  <?= $_SESSION['userInfos']->user_reasons; ?></p>
                                 </div>
                             </div>
@@ -97,16 +98,16 @@ if (!isset($_SESSION['userInfos'])) {
                     <div class="card-action center-align">
                         <form action="" method="POST">
                             <a href="index.php?page=modifuser">Modifier</a>
-                            <button class="waves-effect waves-light btn yellow darken-3 center-align modal-trigger"  href="#modal1">Supprimer</button>  <!-- Modal Structure -->
+                            <button class="waves-effect waves-light btn yellow darken-3 center-align modal-trigger"  href="#modaldelete">Supprimer</button>  <!-- Modal Structure -->
                             <!-- Modal-->
-                            <div id="modal1" class="modal center-align">
+                            <div id="modaldelete" class="modal center-align">
                                 <div class="modal-content">
-                                    <h4>Modal Header</h4>
-                                    <p>A bunch of text</p>
+                                    <h4>Suppression du compte</h4>
+                                    <p>La supression de votre compte sera definitive et sans retour possible</p>
                                 </div>
-                                <div class="modal-footer center-align">
-                                    <button href="#!" class="modal-close waves-effect waves-green btn-flat" name="submitDelete">Supprimer mon compte</button>
-                                    <button href="#!" class="modal-close waves-effect waves-green btn-flat">Annuler</button>
+                                <div id="modalfooter" class="center-align">
+                                    <button href="#!" class="modal-close waves-effect waves-green btn-flat red white-text center-align" name="submitDelete">Supprimer mon compte</button>
+                                    <button href="#!" class="modal-close waves-effect waves-green btn-flat grey white-text center-align">Annuler</button>
                                 </div>
                             </div>
                         </form>

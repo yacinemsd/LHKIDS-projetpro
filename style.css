@@ -120,7 +120,6 @@ body{
     padding: 0.5rem;
     margin-left: 3rem;
     margin-right: 3rem;
-
     /* width: 20rem;
     margin-left: 6rem;*/
 }
@@ -299,6 +298,9 @@ body{
     height: 25vh;
     width: 12.5vw;
 }
+div.row.infosprofil1{
+    margin-top: 2rem;
+}
 .divTitleProfile{
     margin-top: 1.5rem;
 }
@@ -320,7 +322,7 @@ body{
     border-radius: 40px;
     margin-top: 2rem;
 }
-#footerProfile{
+/*#footerProfile{
     background-image: linear-gradient(to bottom right,  orange, #ffff);
     margin-top: 4rem;
     margin-bottom: 0;
@@ -328,7 +330,7 @@ body{
 }
 #footer2profil{
     background-color: orange;
-}
+}*/
 .tablePosts{
     margin-top: 1rem;
 }
@@ -385,14 +387,22 @@ a {
 }
 .fontInfouser{
    font-family: monospace;
-   color: blue;
+   color: #2274A5;
 }
 /*css alert update*/
-.card{
-    background: linear-gradient(45deg, rgb(67, 160, 71), rgb(29, 233, 182));
+.gradient-45deg-amber-amber{
+    background: -webkit-linear-gradient(45deg,#ff6f00,#ffca28)!important;
+    background: oldlinear-gradient(45deg,#ff6f00,#ffca28) -moz-!important;
+    background: -o-linear-gradient(45deg,#ff6f00,#ffca28)!important;
+    background: linear-gradient(45deg,#ff6f00,#ffca28)!important;
 }
-
-.card-alert > .close {
+.gradient-45deg-cyan-light-green{
+    background: -webkit-linear-gradient(45deg,#0097a7,#b2ff59)!important;
+    background: oldlinear-gradient(45deg,#0097a7,#b2ff59) -moz-!important;
+    background: -o-linear-gradient(45deg,#0097a7,#b2ff59)!important;
+    background: linear-gradient(45deg,#0097a7,#b2ff59)!important;
+}
+.card-alert > .close{
     cursor : pointer;
     font-size: 20px;
     position: absolute;
@@ -401,4 +411,11 @@ a {
     color: #fff;
     border: none;
     background: 0 0;
+}
+/*modal delete user*/
+#modaldelete{
+    border-radius: 20px;
+}
+#modalfooter{
+    margin-bottom: 0.5rem;
 }

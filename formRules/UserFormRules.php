@@ -33,7 +33,7 @@ $formValidRegistration = FALSE;
     }
         if (isset($_POST['selectuser'])) {
         $selectuser = $_POST['selectuser']; //je declare que la variable firstname = à l'input firstname en excluant tout caractère spécial avec htmlspecialchars qui va convertir toute balise ou autre en caractère
-        if (empty($selectuser)) {
+        if (!isset($selectuser)) {
             $formError['selectuser'] = 'le champ est vide';
         }
     }

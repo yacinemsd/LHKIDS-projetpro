@@ -21,7 +21,22 @@
   </div>
 </div>
     </header>
-<p class="orange center-align"><?= isset($_SESSION['deleteuserOk']) ? $_SESSION['deleteuserOk'] : ''; ?></p>
+<?php if (isset($_SESSION['deleteuserOk'])) { // si ma variable deleteuserOk existe j'affiche mon alert ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col l4 offset-l1">
+                <div class="card-alert card gradient-45deg-cyan-light-green">
+                    <div class="card-content white-text">
+                        <p>Votre compte a été supprimé avec succès</p>
+                    </div>
+                    <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } unset($_SESSION['deleteuserOk']); // je détruit aussitot la variable modif ok avec unset ?>
     <!-- presentation -->
 <div class="container-fluid">
   <div class="row">

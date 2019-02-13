@@ -31,7 +31,7 @@ function createUser() {
 function userConnexion() {
     require 'formRules/ConnexionFormRules.php';
     $sentencePasswordIncorrect = '';
-
+    $pseudoUnknowned = '' ;
     if (isset($_POST['submitConnexion'])) {
         if ($formValidConnexion) {
             $User = new User();
@@ -46,11 +46,11 @@ function userConnexion() {
                     $sentencePasswordIncorrect = 'Mot de passe incorrect';
                 }
             } else {
-                echo 'nul';
+                $pseudoUnknowned = 'Erreur :  pseudo inéxistant';
             }
         }
     }
-    view('connexion.php', ['passwordIncorrect' => $sentencePasswordIncorrect]);
+    view('connexion.php', ['passwordIncorrect' => $sentencePasswordIncorrect, 'pseudoUnknowned' => $pseudoUnknowned ]);
 }
 // fonction deconnexion user     // fonction deconnexion user   
 function userLogout() {
@@ -94,7 +94,7 @@ function deleteUser(){
         $User = new User();
         $User->user_id = $_SESSION['userInfos']->user_id;
         $User->deleteUser();
-        $_SESSION['deleteuserOk'] = 'Votre compte a bien été supprimé';
+        $_SESSION['deleteuserOk'] = true;
         header('Location:index.php?page=home');
         exit();
     }
