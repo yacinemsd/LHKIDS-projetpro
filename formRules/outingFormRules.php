@@ -1,7 +1,7 @@
 <?php
 $formValid = FALSE;
 
-if (isset($_POST['submitCreateOuting'])) {
+
 //    echo '<pre>';
 //    print_r($_POST);
 //    exit;
@@ -69,7 +69,7 @@ if (isset($_POST['submitCreateOuting'])) {
  
     }
     if (count($formError) == 0) { // si je n'ai aucune erreurs j'hydrate mes valeurs en précisant que chaque colonne 
-        $formValid = TRUE;
+        $formOutingValid = TRUE;
     }
-}
+
 

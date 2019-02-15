@@ -118,9 +118,9 @@
                                 </div>
                                 <div class="col s12 m6 right-align">
                                     <!-- Dropdown Trigger -->
-                                    <a class="waves-effect waves-light btn orange accent-3">
+                                    <button class="waves-effect waves-light btn orange accent-3" name="">
                                         <i class="material-icons left">rate_review</i> Publier !
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         </div>

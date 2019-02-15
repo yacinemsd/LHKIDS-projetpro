@@ -21,3 +21,7 @@ function getOutingInfos() {
         'getOutingAge' => $getOutingAge,
         'getOutingPrice' => $getOutingPrice]);
 }
+function createOuting(){
+   
+    
+}
