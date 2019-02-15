@@ -1,8 +1,9 @@
 <!-- profile-page-header -->
 <?php
 if (!isset($_SESSION['userInfos'])) {
-    header('Location: index.php?page=connexion');
     $_SESSION['noConnexion'] = true;
+    header('Location: index.php?page=connexion');
+    exit();
 }
 ?>
 <div class="container-fluid">
@@ -60,10 +61,9 @@ if (!isset($_SESSION['userInfos'])) {
 <div class="container-fluid">
     <div class="row">
         <div id="menuTab" class="col s10 offset-s1 z-depth-4">
-            <ul class="tabs">
-                <li class="tab col s4"><a href="#profilecard" class="active">Mon Profil</a></li>
-                <li class="tab col s4"><a href="#postProfile">Mes posts</a></li>
-                <li class="tab col s4"><a href="#creationSortie">Créer une sortie</a></li>
+            <ul class="tabs center-align">
+                <li class="tab col s6"><a href="#profilecard" class="active">Mon Profil</a></li>
+                <li class="tab col s6"><a href="#postProfile">Mes Sorties</a></li>
             </ul>
             <div class="col s12 l8 offset-l2">
                 <div id="profilecard" class="card z-depth-3">
@@ -157,150 +157,15 @@ if (!isset($_SESSION['userInfos'])) {
                 <div class="container-fluid buttonsPosts">
                     <div class="row">
                         <div class="col s6 center-align">
-                            <button class="btn-large waves-effect waves-light yellow darken-3 z-depth-3" type="" name="action" href="">Créer une sortie !</button>
+                            <a class="btn-large waves-effect waves-light gradient-45deg-amber-amber z-depth-3" href="index.php?page=outingForm">Créer une sortie !</a>
                         </div>
                         <div class="col s6 center-align">
-                            <button class="btn-large waves-effect waves-light yellow darken-3 z-depth-3" type="" name="action">Catalogue de sorties</button>
-                        </div>
-                    </div>
-                </div>
-            </div> <!--fin div postProfile-->
-
-            <!-- creation sortie --><!-- creation sortie --><!-- creation sortie --><!-- creation sortie -->
-            <div id="creationSortie" class="container-fluid ">
-                <div class="row">
-                    <!-- profile-page-sidebar-->
-                    <!-- profile-page-wall -->
-                    <div id="formcreateSortie" class="col s12 l10 offset-l1">
-                        <!-- profile-page-wall-share -->
-                        <div id="" class="row">
-                            <div class="col s12">
-                                <ul class="tabs tab-profile z-depth-1 orange lighten-1">
-                                    <li class="tab col s3">
-                                        <a class="white-text waves-effect waves-light active" href="#UpdateStatus">
-                                            <i class="material-icons">border_color</i>Formulaire</a>
-                                    </li>
-                                </ul>
-                                <!-- UpdateStatus-->
-                                <form id="UpdateStatus" class="tab-content col s12  grey lighten-4" enctype="multipart/form-data">
-                                    <div class="row contenuformcreate">
-                                        <div class="row">
-                                            <div class="col s2">
-                                                <img src="../images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
-                                            </div>
-                                            <div class="input-field col s10">
-                                                <input type="text" class="validate" id="" name="title" tabindex="1" value="">
-                                                <label for="title">Titre de votre publication</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="input-field col s12 m5 l5">
-                                                <input type="text" class="validate" id="" name="place" tabindex="1" value="">
-                                                <label for="lieu">Lieu de la sortie</label>
-                                            </div>
-                                            <div class="input-field col s4 m4 l3">
-                                                <input type="text" class="validate datepicker" id="" name="date" tabindex="2" value="">
-                                                <label for="date">Date la sortie</label>
-                                            </div>
-                                            <div class="input-field col s4 m4 l2">
-                                                <input type="text" class="validate timepicker" id="" name="timestart" tabindex="1" value="">
-                                                <label for="timeDebut">Heure de début</label>
-                                            </div>
-                                            <div class="input-field col s4 m4 l2">
-                                                <input type="text" class="validate timepicker" id="" name="timeend" tabindex="2" value="">
-                                                <label for="timeFin">Heure de fin</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col s6 m3 l3">
-                                                <label>Genre de la sortie : </label>
-                                                <select name="type">
-                                                    <option value="" disabled selected></option>
-                                                    <option value="">Sport</option>
-                                                    <option value="">Culturelle</option>
-                                                    <option value="">Ludique</option>
-                                                    <option value="">Artistique</option>
-                                                    <option value="">Autres</option>
-                                                </select>
-                                            </div>
-                                            <div class="col s6 m3 l3">
-                                                <label>Environnement : </label>
-                                                <select name="environment">
-                                                    <option value="" disabled selected></option>
-                                                    <option value="">Intérieur</option>
-                                                    <option value="">Extérieur</option>
-                                                    <option value="">Intérieur et Extérieur</option>
-                                                </select>
-                                            </div>
-                                            <div class="col s6 m3 l3">
-                                                <label>Tranche d'âge : </label>
-                                                <select name="age">
-                                                    <option value="" disabled selected></option>
-                                                    <option value="">Tout âge</option>
-                                                    <option value="">1ans et plus</option>
-                                                    <option value="">3ans et plus</option>
-                                                    <option value="">6ans et plus</option>
-                                                    <option value="">10ans et plus</option>
-                                                </select>
-                                            </div>
-                                            <div class="col s6 m3 l3">
-                                                <label>Prix : </label>
-                                                <select name="price">
-                                                    <option value="" disabled selected></option>
-                                                    <option value="">Gratuit</option>
-                                                    <option value="">Payant</option>
-                                                    <option value="">Autres(Détails dans la dercription)</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="input-field col s12">
-                                                <textarea id="textarea" name="description" class="materialize-textarea"></textarea>
-                                                <label for="textarea" class="">Décrivez votre sortie !</label>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col s12">
-                                                <div class="file-field input-field">
-                                                    <div class="btn grey lighten-1">
-                                                        <span>Images</span>
-                                                        <input name="image" type="file" multiple>
-                                                    </div>
-                                                    <div class="file-path-wrapper">
-                                                        <input class="file-path validate" type="text" placeholder="Ajouter une ou plusieurs images de votre sortie">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col s12 m6 share-icons">
-                                                <a href="#">
-                                                    <i class="material-icons grey-text text-darken-1">camera_alt</i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="material-icons grey-text text-darken-1">account_circle</i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="material-icons grey-text text-darken-1">keyboard</i>
-                                                </a>
-                                                <a href="#">
-                                                    <i class="material-icons grey-text text-darken-1">location_on</i>
-                                                </a>
-                                            </div>
-                                            <div class="col s12 m6 right-align">
-                                                <!-- Dropdown Trigger -->
-                                                <a class="waves-effect waves-light btn orange accent-3">
-                                                    <i class="material-icons left">rate_review</i> Publier !
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                            <a class="btn-large waves-effect waves-light gradient-45deg-amber-amber z-depth-3" type="" name="">Catalogue de sorties</a>
                         </div>
                     </div>
                 </div>
             </div>
+          <!--fin div postProfile-->
         </div>
     </div>
 </div>

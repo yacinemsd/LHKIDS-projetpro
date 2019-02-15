@@ -402,6 +402,12 @@ a {
     background: -o-linear-gradient(45deg,#0097a7,#b2ff59)!important;
     background: linear-gradient(45deg,#0097a7,#b2ff59)!important;
 }
+.gradient-45deg-indigo-light-blue{
+    background: -webkit-linear-gradient(45deg,#3949ab,#4fc3f7)!important;
+    background: oldlinear-gradient(45deg,#3949ab,#4fc3f7) -moz-!important;
+    background: -o-linear-gradient(45deg,#3949ab,#4fc3f7)!important;
+    background: linear-gradient(45deg,#3949ab,#4fc3f7)!important;
+}
 .card-alert > .close{
     cursor : pointer;
     font-size: 20px;

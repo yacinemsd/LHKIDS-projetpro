@@ -23,8 +23,8 @@ function createUser() {
             exit();
         }
     }
-    $userType = new UserType();
-    $type = $userType->getType();
+    $UserType = new UserType();
+    $type = $UserType->getType();
     view('inscription.php', ['type' => $type]);
 }
 //function connexion user  //function connexion user    //function connexion user

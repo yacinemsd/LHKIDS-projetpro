@@ -17,7 +17,7 @@ if (isset($_GET['page'])) {
     } elseif ($_GET['page'] == 'mentionslegales') {
         view('mentionsLegales.php');
     } elseif ($_GET['page'] == 'profil') {
-        require 'controllers/userController.php';
+        require 'controllers/userController.php';        
         deleteUser();
     } elseif ($_GET['page'] == 'sorties') {
         view('sorties.php');
@@ -32,6 +32,9 @@ if (isset($_GET['page'])) {
     } elseif ($_GET['page'] == 'typesuser') {
         require 'controllers/typeController.php';
         createType();
+    }elseif ($_GET['page'] == 'outingForm') {
+        require 'controllers/outingController.php';
+        getOutingInfos();
     } else {
         view('error404.php');
     }
