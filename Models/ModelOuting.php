@@ -79,6 +79,21 @@ public function createOuting(){
      $createOuting->bindValue(':outingAge_id', $this->outingAge_id, PDO::PARAM_INT);
      $createOuting->bindValue(':outingPrice_id', $this->outingPrice_id, PDO::PARAM_INT);
       
-     return $createOuting->exectue();
+     return $createOuting->execute();
  }
+ public function getOutingInfos(){
+     $database = $this->database;
+     
+     $query = 'SELECT * FROM `outing`'
+             . 'INNER JOIN `outingType` '
+             . 'ON `outing`.`outingType_id` = `outingType`.`outingType_type` '
+             . 'INNER JOIN `outingEnvironment` '
+             . 'ON `outing`.`outingEnvironment_id` = `outingEnvironment`.`outingEnvironment_environment` '
+             . 'INNER JOIN `outingAge` '
+             . 'ON `outing`.`outingAge_id` = `outingAge`.`outingAge_age` '
+             . 'INNER JOIN `outingPrice` '
+             . 'ON `outing`.`outingPrice_id` = `outingPrice`.`outingPrice_price` '
+             . 'WHERE `outing_id` = :outing_id';
+             
+}
 }

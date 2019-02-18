@@ -1,5 +1,5 @@
 <?php
-$formValid = FALSE;
+$formOutingValid = FALSE;
 
 
 //    echo '<pre>';
@@ -42,32 +42,38 @@ $formValid = FALSE;
             $formError['timeend'] = 'le champ est vide';
         }
     }
-        if (isset($_POST['type'])) {
-        $type = $_POST['type'];
+        if (isset($_POST['selectType'])) {
+        $type = $_POST['selectType'];
         if (empty($type)) {
             $formError['type'] = 'le champ est vide';
         }
     }
-    if (isset($_POST['environment'])) {
-        $environment = $_POST['environment'];
+    if (isset($_POST['selectEnvironment'])) {
+        $environment = $_POST['selectEnvironment'];
         if (empty($environment)) {
             $formError['environment'] = 'le champ est vide';
         }
     }
-    if (isset($_POST['age'])) {
-        $age = $_POST['age'];
-        if (empty($type)) {
+    if (isset($_POST['selectAge'])) {
+        $age = $_POST['selectAge'];
+        if (empty($age)) {
             $formError['age'] = 'le champ est vide';
         }
     }
-      if (isset($_POST['description'])) {
-        $description = $_POST['description'];
- 
+    if (isset($_POST['selectPrice'])) {
+        $price = $_POST['selectPrice'];
+        if (empty($price)) {
+            $formError['price'] = 'le champ est vide';
+        }
     }
-          if (isset($_POST['image'])) {
-        $image = $_POST['image'];
- 
-    }
+//      if (isset($_POST['description'])) {
+//        $description = $_POST['description'];
+// 
+//    }
+//          if (isset($_POST['image'])) {
+//        $image = $_POST['image'];
+// 
+//    }
     if (count($formError) == 0) { // si je n'ai aucune erreurs j'hydrate mes valeurs en précisant que chaque colonne 
         $formOutingValid = TRUE;
     }

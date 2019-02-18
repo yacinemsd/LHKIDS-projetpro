@@ -27,7 +27,8 @@
             <div class="col l4 offset-l1">
                 <div class="card-alert card gradient-45deg-cyan-light-green">
                     <div class="card-content white-text">
-                        <p>Votre compte a été supprimé avec succès</p>
+                        <p><i class="material-icons">check</i>
+                            Votre compte a été supprimé avec succès</p>
                     </div>
                     <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">×</span>

@@ -15,7 +15,7 @@
                         </li>
                     </ul>
                     <!-- UpdateStatus-->
-                    <form id="UpdateStatus" class="tab-content col s12  grey lighten-4 z-depth-3" enctype="multipart/form-data">
+                    <form id="UpdateStatus" class="tab-content col s12  grey lighten-4 z-depth-3" enctype="multipart/form-data" action="#" method="POST" role="form">
                         <div class="row contenuformcreate">
                             <div class="row">
                                 <div class="col s2">
@@ -47,7 +47,7 @@
                             <div class="row">
                                 <div class="col s6 m3 l3">
                                     <label>Genre de la sortie : </label>
-                                    <select name="type">
+                                    <select name="selectType">
                                         <option value="" disabled selected></option>
                                         <?php foreach ($getOutingTypes as $outingType) { ?>
                                             <option value="<?= $outingType->outingType_id ?>"><?= $outingType->outingType_type ?></option>
@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="col s6 m3 l3">
                                     <label>Environnement : </label>
-                                    <select name="environment">
+                                    <select name="selectEnvironment">
                                         <option value="" disabled selected></option>
                                         <?php foreach ($getOutingEnvironment as $outingEnvironment) { ?>
                                             <option value="<?= $outingEnvironment->outingEnvironment_id ?>"><?= $outingEnvironment->outingEnvironment_environment ?></option>
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="col s6 m3 l3">
                                     <label>Tranche d'âge : </label>
-                                    <select name="age">
+                                    <select name="selectAge">
                                         <option value="" disabled selected></option>
                                         <?php foreach ($getOutingAge as $outingAge) { ?>
                                             <option value="<?= $outingAge->outingAge_id ?>"><?= $outingAge->outingAge_age ?></option>
@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="col s6 m3 l3">
                                     <label>Prix : </label>
-                                    <select name="price">
+                                    <select name="selectPrice">
                                         <option value="" disabled selected></option>
                                         <?php foreach ($getOutingPrice as $outingPrice) { ?>
                                             <option value="<?= $outingPrice->outingPrice_id ?>"><?= $outingPrice->outingPrice_price ?></option>
@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="col s12 m6 right-align">
                                     <!-- Dropdown Trigger -->
-                                    <button class="waves-effect waves-light btn orange accent-3" name="">
+                                    <button class="waves-effect waves-light btn orange accent-3" type="submit" name="submitCreateOuting">
                                         <i class="material-icons left">rate_review</i> Publier !
                                     </button>
                                 </div>

@@ -34,7 +34,7 @@ if (isset($_GET['page'])) {
         createType();
     }elseif ($_GET['page'] == 'outingForm') {
         require 'controllers/outingController.php';
-        getOutingInfos();
+       outing();
     } else {
         view('error404.php');
     }

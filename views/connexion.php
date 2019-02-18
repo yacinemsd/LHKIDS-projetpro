@@ -4,7 +4,8 @@
             <div class="col l12">
                 <div class="card-alert card gradient-45deg-cyan-light-green">
                     <div class="card-content white-text center-align">
-                        <p>Votre compte a été crée avec succès</p>
+                        <p><i class="material-icons">check</i>
+                            Votre compte a été crée avec succès</p>
                     </div>
                     <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">×</span>
