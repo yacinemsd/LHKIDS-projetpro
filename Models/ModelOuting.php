@@ -13,6 +13,7 @@ public $outingType_id;
 public $outingEnvironment_id;
 public $outingAge_id;
 public $outingPrice_id;
+public $userOuting_id;
 
 public function getOutingTypes() {
 $database = $this->database;
@@ -64,7 +65,8 @@ public function createOuting(){
             . '`outingType_id` = :outingType_id, '
             . '`outingEnvironment_id` = :outingEnvironment_id, '
             . '`outingAge_id` = :outingAge_id, '
-            . '`outingPrice_id` = :outingPrice_id';
+            . '`outingPrice_id` = :outingPrice_id, '
+            . '`userOuting_id` = :userOuting_id';
     
      $createOuting = $database->prepare($query);
      $createOuting->bindValue(':outing_id', $this->outing_id, PDO::PARAM_INT);
@@ -78,22 +80,26 @@ public function createOuting(){
      $createOuting->bindValue(':outingEnvironment_id', $this->outingEnvironment_id, PDO::PARAM_INT);
      $createOuting->bindValue(':outingAge_id', $this->outingAge_id, PDO::PARAM_INT);
      $createOuting->bindValue(':outingPrice_id', $this->outingPrice_id, PDO::PARAM_INT);
+     $createOuting->bindValue(':userOuting_id', $this->userOuting_id, PDO::PARAM_INT);
       
      return $createOuting->execute();
  }
+ 
  public function getOutingInfos(){
      $database = $this->database;
      
      $query = 'SELECT * FROM `outing`'
              . 'INNER JOIN `outingType` '
-             . 'ON `outing`.`outingType_id` = `outingType`.`outingType_type` '
+             . 'ON `outing`.`outingType_id` = `outingType`.`outingType_id` '
              . 'INNER JOIN `outingEnvironment` '
-             . 'ON `outing`.`outingEnvironment_id` = `outingEnvironment`.`outingEnvironment_environment` '
+             . 'ON `outing`.`outingEnvironment_id` = `outingEnvironment`.`outingEnvironment_id` '
              . 'INNER JOIN `outingAge` '
-             . 'ON `outing`.`outingAge_id` = `outingAge`.`outingAge_age` '
+             . 'ON `outing`.`outingAge_id` = `outingAge`.`outingAge_id` '
              . 'INNER JOIN `outingPrice` '
-             . 'ON `outing`.`outingPrice_id` = `outingPrice`.`outingPrice_price` '
-             . 'WHERE `outing_id` = :outing_id';
+             . 'ON `outing`.`outingPrice_id` = `outingPrice`.`outingPrice_id`';
              
-}
+    $getOutingInfos = $database->prepare($query);
+    $getOutingInfos->execute();
+    return $getOutingInfos->fetchAll(PDO::FETCH_OBJ);          
+ }
 }

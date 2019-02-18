@@ -20,7 +20,8 @@ if (isset($_GET['page'])) {
         require 'controllers/userController.php';        
         deleteUser();
     } elseif ($_GET['page'] == 'sorties') {
-        view('sorties.php');
+        require 'controllers/outingController.php';
+        showOuting();
     } elseif ($_GET['page'] == 'modifuser') {
         require 'controllers/userController.php';
         userUpdate();
@@ -33,7 +34,7 @@ if (isset($_GET['page'])) {
         require 'controllers/typeController.php';
         createType();
     }elseif ($_GET['page'] == 'outingForm') {
-        require 'controllers/outingController.php';
+       require 'controllers/outingController.php';
        outing();
     } else {
         view('error404.php');

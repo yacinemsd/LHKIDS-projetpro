@@ -18,10 +18,12 @@ function outing() {
             $Outing->outingEnvironment_id = $_POST['selectEnvironment'];
             $Outing->outingAge_id = $_POST['selectAge'];
             $Outing->outingPrice_id = $_POST['selectPrice'];
+            $Outing->userOuting_id = $_SESSION['userInfos']->user_id;
             $Outing->createOuting();
             echo 'création ok';
         }
-    } $OutingType = new Outing();
+    }
+    $OutingType = new Outing();
     $getOutingTypes = $OutingType->getOutingTypes();
 
     $OutingEnvironment = new Outing();
@@ -39,28 +41,10 @@ function outing() {
         'getOutingAge' => $getOutingAge,
         'getOutingPrice' => $getOutingPrice]);
 }
-
-//        function createOuting() {
-//            if (isset($_POST['submitCreateOuting'])) {
-//                if ($formOutingValid) {
-//                    $Outing = new Outing();
-//                    $Outing->outing_title = $_POST['title'];
-//                    $Outing->outing_place = $_POST['place'];
-//                    $Outing->outing_date = $_POST['date'];
-//                    $Outing->outing_startTime = $_POST['timestart'];
-//                    $Outing->outing_endTime = $_POST['timeend'];
-//                    $Outing->outing_description = $_POST['description'];
-//                    $Outing->outingType_id = $_POST['selectType'];
-//                    $Outing->outingEnvironment_id = $_POST['selectEnvironment'];
-//                    $Outing->outingAge_id = $_POST['selectAge'];
-//                    $Outing->outingPrice_id = $_POST['selectPrice'];
-//                    $Outing->createOuting();
-//                    echo 'cration ok';
-//                }
-//            }
-//            view('outingForm.php', ['getOutingTypes' => $getOutingTypes,
-//                'getOutingEnvironment' => $getOutingEnvironment,
-//                'getOutingAge' => $getOutingAge,
-//                'getOutingPrice' => $getOutingPrice]);
-//        }
-        
+function showOuting(){
+    $getOutingInfos = false;
+    $ShowOuting = new Outing();
+    $getOutingInfos = $ShowOuting->getOutingInfos();
+    
+    view('sorties.php', ['getOutingInfos' => $getOutingInfos]);
+}

@@ -17,7 +17,9 @@
         </div>
       </div>
       <div class="center-align">
-        <p>Titre de la publication</p>
+          <?php foreach($getOutingInfos as $outingInfos){ ?>
+        <p><?= $outingInfos->outing_title ?></p>
+          <?php } ?>
       </div>
       <div class="row rowCarousel">
         <div class="col s12 m6 l6">
