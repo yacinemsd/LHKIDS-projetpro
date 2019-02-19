@@ -9,7 +9,7 @@ if (!isset($_SESSION['userInfos'])) {
 <div class="container-fluid">
     <div class="row imgbackProfil center-align">
         <div class="col s2">
-            <img src="../images/iconprofil.svg" alt="profile image" class="circle z-depth-3 imgprofil">
+            <img src="../images/user_image/<?= $_SESSION['userInfos']->user_image != "" ? $_SESSION['userInfos']->user_image : 'iconprofil.svg'; ?>" alt="profile image" class="circle z-depth-3 imgprofil">
         </div>
         <div class="col s3 center-align divTitleProfile">
             <div class="profiletitle">
@@ -88,7 +88,7 @@ if (!isset($_SESSION['userInfos'])) {
                         <span class="card-title center-align">Profil</span>
                         <div class="row infosprofil1">
                             <div class="col s4">
-                                <img src="../images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
+                                <img src="../images/user_image/<?= $_SESSION['userInfos']->user_image != "" ? $_SESSION['userInfos']->user_image : 'iconprofil.svg'; ?>" class="circle z-depth-3 imgprofil">
                             </div>
                             <div class="col s7 offset-l1">
                                 <div class="row">

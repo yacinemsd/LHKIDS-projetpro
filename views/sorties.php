@@ -7,7 +7,7 @@
             <div class="col s12">
                 <div class="row valign-wrapper topcardSortie">
                     <div class="col s1">
-                        <img src="../images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
+                        <img src="<?= isset($_SESSION['userInfos']->user_image) && $_SESSION['userInfos']->user_image != '../images/user_image/'.$_SESSION['userInfos']->user_image ?  : '../images/iconprofil.svg' ?>" alt="profile image" class="circle z-depth-3">
                     </div>
                     <div class="col s10 valign-wrapper">
                         <p class="grey-text text-darken-4 margin"><?= $outingInfos->user_pseudo ?></p>

@@ -33,8 +33,8 @@
                         <?php
                         foreach ($type as $value) {
                             ?>
-                            <option value="<?=$value->userType_id?>"><?=$value->userType_type?></option>                           
-                                                       
+                            <option value="<?= $value->userType_id ?>"><?= $value->userType_type ?></option>                           
+
                         <?php }
                         ?>
                     </select>
@@ -48,10 +48,10 @@
                     <label for="mail">Adresse Mail</label>
                     <div>
                         <p class="inputError"><?php
-                        if (isset($formError['mail'])) {
-                            echo $formError['mail'];
-                        }
-                        ?></p>
+                            if (isset($formError['mail'])) {
+                                echo $formError['mail'];
+                            }
+                            ?></p>
                     </div>
                 </div>
                 <div class="input-field col s12 l6">
@@ -62,7 +62,7 @@
                             if (isset($formError['pseudo'])) {
                                 echo $formError['pseudo'];
                             }
-                        ?></p>
+                            ?></p>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                             if (isset($formError['password'])) {
                                 echo $formError['password'];
                             }
-                        ?></p>
+                            ?></p>
                     </div>
                 </div>
                 <div class="input-field col s12 l6">
@@ -86,7 +86,7 @@
                             if (isset($formError['confirm'])) {
                                 echo $formError['confirm'];
                             }
-                        ?></p>
+                            ?></p>
                     </div>
                 </div>
             </div>
@@ -115,6 +115,11 @@
                         <div class="file-path-wrapper">
                             <input class="file-path validate" type="text" placeholder="Choisissez une image de profil (facultatif)">
                         </div>
+                        <p class="inputError"><?php
+                            if (isset($formError['image'])) {
+                                echo $formError['image'];
+                            }
+                            ?></p>
                     </div>
                 </div>
             </div>

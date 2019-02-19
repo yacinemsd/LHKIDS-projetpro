@@ -77,6 +77,21 @@ $formValidRegistration = FALSE;
             $formError['reasons'] = 'le champ est vide';
         }
     }
+    if (isset($_FILES['image'])) {
+        if (!empty($_FILES['image']['name'])) {
+        $arrayExtension = ["jpg", "png", "jpeg", "bmp"];
+        $imageExtension = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
+        if (mime_content_type($_FILES['image']['tmp_name']) != 'image/jpg' && mime_content_type($_FILES['image']['tmp_name']) != 'image/jpeg' && mime_content_type($_FILES['image']['tmp_name']) != 'image/bmp' && mime_content_type($_FILES['image']['tmp_name']) != 'image/png') {
+            $formError['image'] = 'Votre fichier n\'est pas vraiment une image';
+        }
+        if (!in_array($imageExtension, $arrayExtension)) {
+            $formError['image'] = 'L\'extension du fichier n\'est pas autorisé';
+        }
+        if (file_exists('images/user_image/'.$_FILES['image']['name'])) {
+            $formError['image'] = 'Une image existe déjà avec ce nom de fichier';
+        }
+        }
+    }
     if (count($formError) == 0) { // si je n'ai aucune erreurs j'hydrate mes valeurs en précisant que chaque colonne 
         $formValidRegistration = TRUE;
     }
