@@ -13,8 +13,10 @@
         <h1 class="titreHeader1">LH KIDS</h1>
         <h2 class="titreHeader2">Vos bons plans sorties au Havre pour vous et vos enfants !</h2>
           <div id="buttons">
+              <?php if(!isset($_SESSION['userInfos'])) { ?>
             <a  id="buttonheader1" class="waves-effect waves-light btn" href="index.php?page=inscription"><i class="fas fa-user"></i>  S'inscrire !</a>
             <a  id="buttonheader2" class="waves-effect waves-light btn" href="index.php?page=connexion"><i class="fas fa-sign-in-alt"></i>  Se connecter</a>
+              <?php } ?>
           </div>
     </div>
 

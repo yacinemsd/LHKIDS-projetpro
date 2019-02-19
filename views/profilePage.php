@@ -57,6 +57,23 @@ if (!isset($_SESSION['userInfos'])) {
         </div>
     </div>
 <?php } unset($_SESSION['modifok']); // je détruit aussitot la variable modif ok avec unset ?>
+<?php if (isset($_SESSION['createOutingOk'])) { // si ma variable modif ok existe j'affiche mon alert ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col l4 offset-l7">
+                <div class="card-alert card gradient-45deg-cyan-light-green">
+                    <div class="card-content white-text">
+                        <p><i class="material-icons">check</i>
+                            Votre sortie a été crée avec succès <a href="index.php?page=sorties">  (voir ) </a></p>
+                    </div>
+                    <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } unset($_SESSION['createOutingOk']); // je détruit aussitot la variable modif ok avec unset ?>
 <!--/ profile-page-header -->
 <div class="container-fluid">
     <div class="row">
@@ -128,30 +145,17 @@ if (!isset($_SESSION['userInfos'])) {
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>01/01/2019</td>
-                            <td>Plage/Sortie à la plage</td>
+                        <?php foreach ($getOutingUser as $outingUser) { ?>  
+                        <tr>                                               
+                            <td><?= $outingUser->outing_id ?></td>
+                            <td><?= $outingUser->outing_date ?></td>
+                            <td><?= $outingUser->outingType_type ?> / <?= $outingUser->outing_title ?></td>
+                             
                             <td>
                                 <button class="btn-small waves-effect waves-light yellow darken-3" type="submit" name="action">Ouvrir</button>
                             </td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>01/01/2019</td>
-                            <td>Plage/Sortie à la plage</td>
-                            <td>
-                                <button class="btn-small waves-effect waves-light yellow darken-3" type="submit" name="action">Ouvrir</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>01/01/2019</td>
-                            <td>Plage/Sortie à la plage</td>
-                            <td>
-                                <button class="btn-small waves-effect waves-light yellow darken-3" type="submit" name="action">Ouvrir</button>
-                            </td>
-                        </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
                 <div class="container-fluid buttonsPosts">

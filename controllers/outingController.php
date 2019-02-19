@@ -20,6 +20,9 @@ function outing() {
             $Outing->outingPrice_id = $_POST['selectPrice'];
             $Outing->userOuting_id = $_SESSION['userInfos']->user_id;
             $Outing->createOuting();
+            $_SESSION['createOutingOk'] = true;
+            header('Location: index.php?page=profil');
+            exit();
             echo 'création ok';
         }
     }
@@ -45,6 +48,14 @@ function showOuting(){
     $getOutingInfos = false;
     $ShowOuting = new Outing();
     $getOutingInfos = $ShowOuting->getOutingInfos();
-    
+
     view('sorties.php', ['getOutingInfos' => $getOutingInfos]);
+}
+function showOutingUser(){
+    $getOutingUser = false;
+    $ShowOutingUser = new Outing();
+    $ShowOutingUser->user_id = $_SESSION['userInfos']->user_id;
+    $getOutingUser = $ShowOutingUser->getOutingUser();
+    
+    view('profilePage.php', ['getOutingUser' => $getOutingUser]);
 }

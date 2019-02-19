@@ -3,7 +3,7 @@
     <div class="row">
         <h1 class="center-align" id="formTitle">Formulaire d'inscription</h1>
 
-        <form class="col s12 z-depth-3" id="FormInscription" class="form" action="#" method="POST" role="form">
+        <form class="col s12 z-depth-3" id="FormInscription" class="form" action="#" method="POST" role="form" enctype="multipart/form-data">
             <div class="row">
                 <div class="input-field col s12 l4">
                     <input type="text" class="validate" id="lastname" name="lastname" tabindex="1" value="<?= isset($_POST['lastname']) ? $_POST['lastname'] : ''; ?>">
@@ -110,7 +110,7 @@
                     <div class="file-field input-field">
                         <div class="btn grey lighten-1">
                             <span>Image de profil</span>
-                            <input type="file">
+                            <input type="file" name="image" />
                         </div>
                         <div class="file-path-wrapper">
                             <input class="file-path validate" type="text" placeholder="Choisissez une image de profil (facultatif)">

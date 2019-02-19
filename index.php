@@ -18,6 +18,8 @@ if (isset($_GET['page'])) {
         view('mentionsLegales.php');
     } elseif ($_GET['page'] == 'profil') {
         require 'controllers/userController.php';        
+        require 'controllers/outingController.php'; 
+        showOutingUser();
         deleteUser();
     } elseif ($_GET['page'] == 'sorties') {
         require 'controllers/outingController.php';

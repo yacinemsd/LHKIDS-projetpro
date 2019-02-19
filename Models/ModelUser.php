@@ -9,6 +9,7 @@ class User extends Database {
     public $user_pseudo;
     public $user_password;
     public $user_reasons;
+    public $user_image;
     public $userType_id;
 
     public function createUser() {
@@ -21,6 +22,7 @@ class User extends Database {
                 . '`user_pseudo` = :user_pseudo, '
                 . '`user_password` = :user_password, '
                 . '`user_reasons` = :user_reasons, '
+                . '`user_image` = :user_image, '
                 . '`userType_id` = :userType_id';
 
         $createUser = $database->prepare($query); // je stocke dans createUser la preparation de la requete avec la connexion a la bdd
@@ -31,6 +33,7 @@ class User extends Database {
         $createUser->bindValue(':user_pseudo', $this->user_pseudo, PDO::PARAM_STR);
         $createUser->bindValue(':user_password', $this->user_password, PDO::PARAM_STR);
         $createUser->bindValue(':user_reasons', $this->user_reasons, PDO::PARAM_STR);
+        $createUser->bindValue(':user_image', $this->user_image, PDO::PARAM_STR);
         $createUser->bindValue(':userType_id', $this->userType_id, PDO::PARAM_INT);
 
         return $createUser->execute(); // j'éxécute la requête     

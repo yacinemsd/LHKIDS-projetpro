@@ -7,7 +7,6 @@ require 'Models/ModelUserType.php';
 function createUser() {
     if (isset($_POST['submitCreateUser'])) {
         require 'formRules/UserFormRules.php'; //vérifs inputs formulaire
-
         if ($formValidRegistration) {
             $User = new User(); //j'instancie un nouvelle objet User qui bénéficie des meme attributs de la class User
             $User->user_lastname = $_POST['lastname']; // je fais le liens entre chasue attribut de la class et l'input du formulaire avec un POST
@@ -17,6 +16,13 @@ function createUser() {
             $User->user_password = password_hash($_POST['password'], PASSWORD_DEFAULT); // cript du passsword à l'inscription
             $User->user_reasons = $_POST['reasons'];
             $User->userType_id = $_POST['selectuser'];
+            if (isset($_FILES['image'])) { // si ma valeur image existe j'hydrate ma valeur
+                $User->user_image = $_FILES['image']['name']; // je récupère la valeur name de image
+                move_uploaded_file($_FILES["image"]["tmp_name"], 'images/user_image/' . $_FILES["image"]["name"]);
+            }
+            else {
+                $User->user_image = NULL;
+            }
             $User->createUser();
 
             header('Location: index.php?page=connexion&inscription');
@@ -98,5 +104,4 @@ function deleteUser(){
         header('Location:index.php?page=home');
         exit();
     }
-    view('profilePage.php');
 }
