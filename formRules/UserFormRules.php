@@ -78,16 +78,16 @@ $formValidRegistration = FALSE;
         }
     }
     if (isset($_FILES['image'])) {
-        if (!empty($_FILES['image']['name'])) {
-        $arrayExtension = ["jpg", "png", "jpeg", "bmp"];
-        $imageExtension = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
+        if (!empty($_FILES['image']['name'])) { // si je récupère mon index image avec un name je rentre dans ma condition
+        $arrayExtension = ['jpg', 'png', 'jpeg', 'bmp'];// je créer un tableau contenant les extensions
+        $imageExtension = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));// j'utilise strtolower pour passer l'extension du fichier en miniscule
         if (mime_content_type($_FILES['image']['tmp_name']) != 'image/jpg' && mime_content_type($_FILES['image']['tmp_name']) != 'image/jpeg' && mime_content_type($_FILES['image']['tmp_name']) != 'image/bmp' && mime_content_type($_FILES['image']['tmp_name']) != 'image/png') {
-            $formError['image'] = 'Votre fichier n\'est pas vraiment une image';
+            $formError['image'] = 'Le fichier choisi n\'est pas une image';
         }
-        if (!in_array($imageExtension, $arrayExtension)) {
-            $formError['image'] = 'L\'extension du fichier n\'est pas autorisé';
+        if (!in_array($imageExtension, $arrayExtension)) { // je vérifie l'extension de l'image télécharger par rapport au valeur de mon tableau d'extension
+            $formError['image'] = 'L\'extension du fichier choisi n\'est pas autorisé';
         }
-        if (file_exists('images/user_image/'.$_FILES['image']['name'])) {
+        if (file_exists('images/user_image/'.$_FILES['image']['name'])) { // je vérifie si le nom de l'image récupérer existe déjà
             $formError['image'] = 'Une image existe déjà avec ce nom de fichier';
         }
         }

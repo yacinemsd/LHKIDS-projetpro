@@ -298,6 +298,11 @@ body{
     height: 25vh;
     width: 12.5vw;
 }
+.imgprofilInOuting{
+    margin: 1rem;
+    height: 10vh;
+    width:  5vw;
+}
 div.row.infosprofil1{
     margin-top: 2rem;
 }

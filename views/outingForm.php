@@ -19,7 +19,7 @@
                         <div class="row contenuformcreate">
                             <div class="row">
                                 <div class="col s2">
-                                    <img src="../images/iconprofil.svg" alt="profile image" class="circle z-depth-3">
+                                    <img src="../images/user_image/<?= $_SESSION['userInfos']->user_image != "" ? $_SESSION['userInfos']->user_image : 'iconprofil.svg'; ?>" alt="profile image" class="circle z-depth-3 imgprofil">
                                 </div>
                                 <div class="input-field col s10">
                                     <input type="text" class="validate" id="" name="title" tabindex="1" value="">
@@ -98,6 +98,11 @@
                                         <div class="file-path-wrapper">
                                             <input class="file-path validate" type="text" placeholder="Ajouter une ou plusieurs images de votre sortie">
                                         </div>
+                                        <p class="inputError"><?php
+                                            if (isset($formError['image'])) {
+                                                echo $formError['image'];
+                                            }
+                                            ?></p>
                                     </div>
                                 </div>
                             </div>

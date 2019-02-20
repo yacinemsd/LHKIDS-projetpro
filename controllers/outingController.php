@@ -19,11 +19,19 @@ function outing() {
             $Outing->outingAge_id = $_POST['selectAge'];
             $Outing->outingPrice_id = $_POST['selectPrice'];
             $Outing->userOuting_id = $_SESSION['userInfos']->user_id;
-            $Outing->createOuting();
+            $outingId = $Outing->createOuting(); //la méthode createOuting retourne le dernier id qui a été inseré, cela servira pour l'insertion d'image
+            $Outing->outing_id = $outingId;
+            if (isset($_FILES['image'])) { // si ma valeur image existe j'hydrate ma valeur
+                $Outing->image_path = $_FILES['image']['name']; // je récupère la valeur name de image
+                move_uploaded_file($_FILES["image"]["tmp_name"], 'images/user_image/' . $_FILES["image"]["name"]);
+            }
+            else {
+                $User->image_path = NULL;
+            }
+            $Outing->insertImage();
             $_SESSION['createOutingOk'] = true;
             header('Location: index.php?page=profil');
             exit();
-            echo 'création ok';
         }
     }
     $OutingType = new Outing();
@@ -44,18 +52,32 @@ function outing() {
         'getOutingAge' => $getOutingAge,
         'getOutingPrice' => $getOutingPrice]);
 }
-function showOuting(){
+
+function showOutings() {
     $getOutingInfos = false;
-    $ShowOuting = new Outing();
-    $getOutingInfos = $ShowOuting->getOutingInfos();
+    $ShowOutings = new Outing();
+    $getOutingInfos = $ShowOutings->getOutingInfos();
 
     view('sorties.php', ['getOutingInfos' => $getOutingInfos]);
 }
-function showOutingUser(){
+
+function showOutingUser() {
     $getOutingUser = false;
     $ShowOutingUser = new Outing();
     $ShowOutingUser->user_id = $_SESSION['userInfos']->user_id;
     $getOutingUser = $ShowOutingUser->getOutingUser();
-    
+
     view('profilePage.php', ['getOutingUser' => $getOutingUser]);
+}
+
+function showOutingOne() {
+    $ShowOutingOne = new Outing();
+    $ShowOutingOne->outing_id = $_GET['id'];
+    $getOutingOne = $ShowOutingOne->showOutingOne();
+
+    view('outingOne.php', ['getOutingOne' => $getOutingOne]);
+}
+function insertImage(){
+    $insertImage = new Images();
+//    $insertImage->
 }

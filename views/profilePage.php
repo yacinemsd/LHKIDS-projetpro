@@ -64,7 +64,7 @@ if (!isset($_SESSION['userInfos'])) {
                 <div class="card-alert card gradient-45deg-cyan-light-green">
                     <div class="card-content white-text">
                         <p><i class="material-icons">check</i>
-                            Votre sortie a été crée avec succès <a href="index.php?page=sorties">  (voir ) </a></p>
+                            Votre sortie a été crée avec succès <a href="index.php?page=sorties">  ( voir ) </a></p>
                     </div>
                     <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">×</span>
@@ -152,7 +152,8 @@ if (!isset($_SESSION['userInfos'])) {
                             <td><?= $outingUser->outingType_type ?> / <?= $outingUser->outing_title ?></td>
                              
                             <td>
-                                <button class="btn-small waves-effect waves-light yellow darken-3" type="submit" name="action">Ouvrir</button>
+                                <a href="index.php?page=outingOne&id=<?= $outingUser->outing_id ?>" class="btn-small waves-effect waves-light yellow darken-3">Ouvrir</a>
+                            <!--je récupère l'id dans mon url via le href-->
                             </td>
                         </tr>
                         <?php } ?>

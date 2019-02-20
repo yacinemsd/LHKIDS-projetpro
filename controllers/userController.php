@@ -3,6 +3,7 @@
 //require 'formRules/UserFormRules.php';
 require 'Models/ModelUser.php';
 require 'Models/ModelUserType.php';
+
 //fonction création user   //fonction création user   //fonction création user  
 function createUser() {
     if (isset($_POST['submitCreateUser'])) {
@@ -33,6 +34,7 @@ function createUser() {
     $type = $UserType->getType();
     view('inscription.php', ['type' => $type]);
 }
+
 //function connexion user  //function connexion user    //function connexion user
 function userConnexion() {
     require 'formRules/ConnexionFormRules.php';
@@ -58,6 +60,7 @@ function userConnexion() {
     }
     view('connexion.php', ['passwordIncorrect' => $sentencePasswordIncorrect, 'pseudoUnknowned' => $pseudoUnknowned ]);
 }
+
 // fonction deconnexion user     // fonction deconnexion user   
 function userLogout() {
     if (isset($_GET['page']) && $_GET['page'] == 'deconnexion') {
@@ -66,6 +69,7 @@ function userLogout() {
         exit();
     }
 }
+
 // fonction modification user   // fonction modification user
 function userUpdate() {
     if (isset($_POST['submitUpdateUser'])) {
