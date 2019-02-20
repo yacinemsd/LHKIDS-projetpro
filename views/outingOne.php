@@ -6,7 +6,7 @@
             <div class="col s12">
                 <div class="row valign-wrapper topcardSortie">
                     <div class="col s1">
-                        <img src="<?= $getOutingOne->user_image ?>" alt="profile image" class="circle z-depth-3 imgprofil">
+                        <img src="" alt="profile image" class="circle z-depth-3 imgprofil">
                     </div>
                     <div class="col s10 valign-wrapper">
                         <p class="grey-text text-darken-4 margin"><?= $getOutingOne->user_pseudo ?></p>

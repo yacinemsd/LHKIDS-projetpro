@@ -69,7 +69,7 @@ $formOutingValid = FALSE;
         if (!empty($_FILES['image']['name'])) { // si je récupère mon index image avec un name je rentre dans ma condition
         $arrayExtension = ['jpg', 'png', 'jpeg', 'bmp'];// je créer un tableau contenant les extensions
         $imageExtension = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));// j'utilise strtolower pour passer l'extension du fichier en miniscule
-        if (mime_content_type($_FILES['image']['tmp_name']) != 'image/jpg' && mime_content_type($_FILES['image']['tmp_name']) != 'image/jpeg' && mime_content_type($_FILES['image']['tmp_name']) != 'image/bmp' && mime_content_type($_FILES['image']['tmp_name']) != 'image/png') {
+        if (mime_content_type($_FILES['image']['tmp_name']) != 'image/jpg' && mime_content_type($_FILES['image']['tmp_name']) != 'image/jpeg' && mime_content_type($_FILES['image']['tmp_name']) != 'image/bmp'){
             $formError['image'] = 'Le fichier choisi n\'est pas une image';
         }
         if (!in_array($imageExtension, $arrayExtension)) { // je vérifie l'extension de l'image télécharger par rapport au valeur de mon tableau d'extension

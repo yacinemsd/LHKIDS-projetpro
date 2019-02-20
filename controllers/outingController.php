@@ -77,7 +77,4 @@ function showOutingOne() {
 
     view('outingOne.php', ['getOutingOne' => $getOutingOne]);
 }
-function insertImage(){
-    $insertImage = new Images();
-//    $insertImage->
-}
+
