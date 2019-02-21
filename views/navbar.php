@@ -11,6 +11,9 @@
                 <?php if ($_GET['page'] !== 'sorties') { ?>
                     <li><a href="index.php?page=sorties">Les sorties</a></li>
                 <?php } ?>
+                <?php if ($_GET['page'] !== 'outingForm') { ?>
+                    <li><a href="index.php?page=outingForm">Créer une sortie</a></li>
+                <?php } ?>
             <?php } ?>
             <?php if (!isset($_SESSION['userInfos'])) { ?>
                 <li><a href="index.php?page=inscription">Je m'inscris !</a></li>

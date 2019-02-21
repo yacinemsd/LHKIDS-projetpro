@@ -24,7 +24,7 @@ if (!isset($_SESSION['userInfos'])) {
                 <p>Mes sorties</p>
             </div>
             <div class="profiletitle2">
-                <p>0</p>
+                <p><?= count($getOutingUser); ?></p>
             </div>
         </div>
         <div class="col s3 center-align divTitleProfile">
@@ -113,9 +113,8 @@ if (!isset($_SESSION['userInfos'])) {
                         </div>
                     </div>
                     <div class="card-action center-align">
-                        <form action="" method="POST">
-                            <a href="index.php?page=modifuser">Modifier</a>
-                            <button class="waves-effect waves-light btn yellow darken-3 center-align modal-trigger"  href="#modaldelete">Supprimer</button>  <!-- Modal Structure -->
+                            <a class="waves-effect waves-light btn yellow darken-3 " href="index.php?page=modifuser">Modifier</a>
+                            <button class="waves-effect waves-light btn yellow darken-3 modal-trigger"  href="#modaldelete">Supprimer</button>  <!-- Modal Structure -->
                             <!-- Modal-->
                             <div id="modaldelete" class="modal center-align">
                                 <div class="modal-content">
@@ -127,7 +126,6 @@ if (!isset($_SESSION['userInfos'])) {
                                     <button href="#!" class="modal-close waves-effect waves-green btn-flat grey white-text center-align">Annuler</button>
                                 </div>
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -165,7 +163,7 @@ if (!isset($_SESSION['userInfos'])) {
                             <a class="btn-large waves-effect waves-light gradient-45deg-amber-amber z-depth-3" href="index.php?page=outingForm">Créer une sortie !</a>
                         </div>
                         <div class="col s6 center-align">
-                            <a class="btn-large waves-effect waves-light gradient-45deg-amber-amber z-depth-3" type="" name="">Catalogue de sorties</a>
+                            <a class="btn-large waves-effect waves-light gradient-45deg-amber-amber z-depth-3" href="index.php?page=sorties" name="">Catalogue de sorties</a>
                         </div>
                     </div>
                 </div>

@@ -30,9 +30,9 @@ if(!isset($_SESSION['userInfos'])){
                 <div class="row rowCarousel">
                     <div class="col s12 m6 l6">
                         <div class="carousel" id="carouselSortie">
-                            <a class="carousel-item" href="#one!"><img class="circle z-depth-2" src="../images/user_image/<?= $outingInfos->image_path != "" ? $outingInfos->image_path : 'iconprofil.svg'; ?>"></a>
-                            <a class="carousel-item" href="#two!"><img class="circle z-depth-2" src="../images/user_image/<?= $outingInfos->image_path != "" ? $outingInfos->image_path : 'iconprofil.svg'; ?>"></a>
-                            <a class="carousel-item" href="#three!"><img class="circle z-depth-2" src="../images/user_image/<?= $outingInfos->image_path != "" ? $outingInfos->image_path : 'iconprofil.svg'; ?>"></a>
+                            <a class="carousel-item" href="#one!"><img class="circle z-depth-2" src="../images/user_image/<?= $outingInfos->image_path != "" ? $outingInfos->image_path : 'logo.png'; ?>"></a>
+                            <a class="carousel-item" href="#two!"><img class="circle z-depth-2" src="../images/user_image/<?= $outingInfos->image_path != "" ? $outingInfos->image_path : 'logo.png'; ?>"></a>
+                            <a class="carousel-item" href="#three!"><img class="circle z-depth-2" src="../images/user_image/<?= $outingInfos->image_path != "" ? $outingInfos->image_path : 'logo.png'; ?>"></a>
                         </div>
                     </div>
                     <div class="col s12 m6 l6 center-align">

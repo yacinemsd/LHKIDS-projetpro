@@ -373,6 +373,10 @@ a {
 .rowCarousel{
     border-bottom: 1px solid #80808063;
 }
+.rowcomSortie{
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #80808063;
+}
 #carouselSortie{
     height: 230px;
 }

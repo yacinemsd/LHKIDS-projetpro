@@ -59,6 +59,7 @@ class Outing extends Database {
 
         $query = 'INSERT INTO `outing` '
                 . 'SET `outing_id` = :outing_id, '
+                . '`outing_postDateTime` = :outing_postDateTime, '
                 . '`outing_title` = :outing_title, '
                 . '`outing_place` = :outing_place, '
                 . '`outing_date` = :outing_date, '
@@ -70,9 +71,11 @@ class Outing extends Database {
                 . '`outingAge_id` = :outingAge_id, '
                 . '`outingPrice_id` = :outingPrice_id, '
                 . '`userOuting_id` = :userOuting_id';
-
+        
+        $this->outing_postDateTime = date('Y-m-d H:i:s');
         $createOuting = $database->prepare($query);
         $createOuting->bindValue(':outing_id', $this->outing_id, PDO::PARAM_INT);
+        $createOuting->bindValue(':outing_postDateTime', $this->outing_postDateTime, PDO::PARAM_STR);
         $createOuting->bindValue(':outing_title', $this->outing_title, PDO::PARAM_STR);
         $createOuting->bindValue(':outing_place', $this->outing_place, PDO::PARAM_STR);
         $createOuting->bindValue(':outing_date', $this->outing_date, PDO::PARAM_STR);
@@ -123,7 +126,6 @@ class Outing extends Database {
                 . 'ON `images`.`outing_id` = `outing`.`outing_id`';
 
         $getOutingInfos = $database->prepare($query);
-        $this->outing_postDateTime = date('Y-m-d H:i:s');
         $getOutingInfos->execute();
         return $getOutingInfos->fetchAll(PDO::FETCH_OBJ);
     }
@@ -145,7 +147,6 @@ class Outing extends Database {
                 . 'WHERE `userOuting_id` = :user_id';
 
         $getOutingUser = $database->prepare($query);
-        $this->outing_postDateTime = date('Y-m-d H:i:s');
         $getOutingUser->bindValue(':user_id', $this->user_id, PDO::PARAM_INT);
         $getOutingUser->execute();
         return $getOutingUser->fetchAll(PDO::FETCH_OBJ);
@@ -165,10 +166,11 @@ class Outing extends Database {
                 . 'ON `outing`.`outingPrice_id` = `outingPrice`.`outingPrice_id` '
                 . 'INNER JOIN `user` '
                 . 'ON `user`.`user_id` = `outing`.`userOuting_id` '
+                . 'INNER JOIN `images` '
+                . 'ON `images`.`outing_id` = `outing`.`outing_id` '
                 . 'WHERE `outing`.`outing_id` = :outing_id';
 
         $showOutingOne = $database->prepare($query);
-        $this->outing_postDateTime = date('Y-m-d H:i:s');
         $showOutingOne->bindValue(':outing_id', $this->outing_id, PDO::PARAM_INT);
         $showOutingOne->execute();
         return $showOutingOne->fetch(PDO::FETCH_OBJ);
