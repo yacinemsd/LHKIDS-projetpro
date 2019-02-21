@@ -85,13 +85,13 @@
             </div>
             <div class="row">
                 <div class="col s6 right-align">
-                    <a class="waves-effect waves-light btn yellow darken-3 " href="">Modifier</a>
+                    <a class="waves-effect waves-light btn yellow darken-3 " href="index.php?page=modifOuting">Modifier</a>
                 </div>
                 <div class="col s6 left-align">
                     <button class="waves-effect waves-light btn yellow darken-3 modal-trigger"  href="#modaldeleteOuting">Supprimer</button>  <!-- Modal Structure -->
                 </div>
                 <!-- Modal-->
-                <div id="modaldelete" class="modal center-align">
+                <div id="modaldeleteOuting" class="modal center-align">
                     <div class="modal-content">
                         <h4>Suppression de la sortie</h4>
                         <p>La supression de la sortie sera definitive et sans retour possible</p>

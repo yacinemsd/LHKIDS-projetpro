@@ -41,6 +41,9 @@ if (isset($_GET['page'])) {
     }elseif ($_GET['page'] == 'outingOne') {
         require 'controllers/outingController.php';
         showOutingOne();
+    }elseif ($_GET['page'] == 'modifOuting') {
+        require 'controllers/outingController.php';
+        updateOuting();
     } else {
         view('error404.php');
     }

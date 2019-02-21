@@ -87,8 +87,8 @@ class Outing extends Database {
         $createOuting->bindValue(':outingAge_id', $this->outingAge_id, PDO::PARAM_INT);
         $createOuting->bindValue(':outingPrice_id', $this->outingPrice_id, PDO::PARAM_INT);
         $createOuting->bindValue(':userOuting_id', $this->userOuting_id, PDO::PARAM_INT);
-        $createOuting->execute();
-        return $database->lastInsertId();
+        $createOuting->execute(); 
+        return $createOuting->lastInsertId();
     }
     
     public function insertImage() {
@@ -174,5 +174,57 @@ class Outing extends Database {
         $showOutingOne->bindValue(':outing_id', $this->outing_id, PDO::PARAM_INT);
         $showOutingOne->execute();
         return $showOutingOne->fetch(PDO::FETCH_OBJ);
+    }
+    
+    public function updateOuting(){
+        $database = $this->database;
+        
+        $query = 'UPDATE `outing` '
+                . 'SET `outing_id` = :outing_id, '
+                . '`outing_postDateTime` = :outing_postDateTime, '
+                . '`outing_title` = :outing_title, '
+                . '`outing_place` = :outing_place, '
+                . '`outing_date` = :outing_date, '
+                . '`outing_startTime` = :outing_startTime, '
+                . '`outing_endTime` = :outing_endTime, '
+                . '`outing_description` = :outing_description, '
+                . '`outingType_id` = :outingType_id, '
+                . '`outingEnvironment_id` = :outingEnvironment_id, '
+                . '`outingAge_id` = :outingAge_id, '
+                . '`outingPrice_id` = :outingPrice_id, '
+                . '`userOuting_id` = :userOuting_id, '
+                . 'WHERE `outing`.`outing_id` = :outing_id';
+        
+        $updateOuting = $database->prepare($query);
+        $updateOuting->bindValue(':outing_id', $this->outing_id, PDO::PARAM_INT);
+        $updateOuting->bindValue(':outing_postDateTime', $this->outing_postDateTime, PDO::PARAM_STR);
+        $updateOuting->bindValue(':outing_title', $this->outing_title, PDO::PARAM_STR);
+        $updateOuting->bindValue(':outing_place', $this->outing_place, PDO::PARAM_STR);
+        $updateOuting->bindValue(':outing_date', $this->outing_date, PDO::PARAM_STR);
+        $updateOuting->bindValue(':outing_startTime', $this->outing_startTime, PDO::PARAM_STR);
+        $updateOuting->bindValue(':outing_endTime', $this->outing_endTime, PDO::PARAM_STR);
+        $updateOuting->bindValue(':outing_description', $this->outing_description, PDO::PARAM_STR);
+        $updateOuting->bindValue(':outingType_id', $this->outingType_id, PDO::PARAM_INT);
+        $updateOuting->bindValue(':outingEnvironment_id', $this->outingEnvironment_id, PDO::PARAM_INT);
+        $updateOuting->bindValue(':outingAge_id', $this->outingAge_id, PDO::PARAM_INT);
+        $updateOuting->bindValue(':outingPrice_id', $this->outingPrice_id, PDO::PARAM_INT);
+        $updateOuting->bindValue(':userOuting_id', $this->userOuting_id, PDO::PARAM_INT);
+        $updateOuting->bindValue(':outing_id', $this->userOuting_id, PDO::PARAM_INT);
+        
+        return $updateOuting->execute(); 
+    }
+    public function updateImage() {
+        $database = $this->database;
+
+        $query = 'UPDATE `images` '
+                . 'SET `image_path` = :image_path, '
+                . 'WHERE `outing`.`outing_id` = :outing_id';
+        
+        $insertImage = $database->prepare($query);
+        $insertImage->bindValue(':image_path', $this->image_path, PDO::PARAM_STR);
+        $insertImage->bindValue(':outing_id', $this->outing_id, PDO::PARAM_INT);
+       
+        return $insertImage->execute();
+    
     }
 }
