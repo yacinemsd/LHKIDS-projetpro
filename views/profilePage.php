@@ -85,7 +85,7 @@ if (!isset($_SESSION['userInfos'])) {
             <div class="col s12 l8 offset-l2">
                 <div id="profilecard" class="card z-depth-3">
                     <div class="card-content white-text">
-                        <span class="card-title center-align">Profil</span>
+                        <span  id="titlecardProfil" class="card-title center-align">Mes Informations</span>
                         <div class="row infosprofil1">
                             <div class="col s4">
                                 <img src="../images/user_image/<?= $_SESSION['userInfos']->user_image != "" ? $_SESSION['userInfos']->user_image : 'iconprofil.svg'; ?>" class="circle z-depth-3 imgprofil">

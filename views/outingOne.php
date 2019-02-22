@@ -9,15 +9,15 @@
                     <img src="../images/user_image/<?= $getOutingOne->user_image != "" ? $getOutingOne->user_image : 'iconprofil.svg'; ?>" alt="profile image" class="circle z-depth-3 imgprofilInOuting">
                 </div>
                 <div class="col s10 valign-wrapper">
-                    <p class="grey-text text-darken-4 margin"><?= $getOutingOne->user_pseudo ?></p>
-                    <span class="grey-text text-darken-1 ultra-small"> _ Publiée le : <?= $getOutingOne->outing_postDateTime ?></span>
+                    <p class="pseudocardOuting"><?= $getOutingOne->user_pseudo ?></p>
+                    <span class="blue-text ultra-small"> _ Publiée le : <?= $getOutingOne->outing_postDateTime ?></span>
                 </div>
                 <div class="col s1 right-align">
                     <i class="material-icons">expand_more</i>
                 </div>
             </div>
             <div class="center-align">
-                <p><?= $getOutingOne->outing_title ?></p>
+                <p class="titleOuting"><?= $getOutingOne->outing_title ?></p>
             </div>
             <div class="row rowCarousel">
                 <div class="col s12 m6 l6">
@@ -30,39 +30,39 @@
                 <div class="col s12 m6 l6 center-align">
                     <div class="row">
                         <div class="col">
-                            <p>Lieu : <?= $getOutingOne->outing_place ?></p>
+                            <p class="textOuting">Lieu : <?= $getOutingOne->outing_place ?></p>
                         </div>
                         <div class="col">
-                            <p>Date : <?= $getOutingOne->outing_date ?></p>
+                            <p class="textOuting">Date : <?= $getOutingOne->outing_date ?></p>
                         </div>
                         <div class="col">
-                            <p>Début : <?= $getOutingOne->outing_startTime ?> / Fin : <?= $getOutingOne->outing_endTime ?></p>
+                            <p class="textOuting">Début : <?= $getOutingOne->outing_startTime ?> / Fin : <?= $getOutingOne->outing_endTime ?></p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p>Genre : <?= $getOutingOne->outingType_type ?></p>
+                            <p class="textOuting">Genre : <?= $getOutingOne->outingType_type ?></p>
                         </div>
                         <div class="col">
-                            <p>Environement : <?= $getOutingOne->outingEnvironment_environment ?></p>
+                            <p class="textOuting">Environement : <?= $getOutingOne->outingEnvironment_environment ?></p>
                         </div>
                     </div>
                     <div class="row center-align">
                         <div class="col">
-                            <p>Age : <?= $getOutingOne->outingAge_age ?></p>
+                            <p class="textOuting">Age : <?= $getOutingOne->outingAge_age ?></p>
                         </div>
                         <div class="col">
-                            <p>Prix : <?= $getOutingOne->outingPrice_price ?></p>
+                            <p class="textOuting">Prix : <?= $getOutingOne->outingPrice_price ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s12">
                         <div class="col s2 center-align">
-                            <p class="black-text text-darken-4 margin">Description Sortie :</p>
+                            <p class="textOuting">Description Sortie :</p>
                         </div>
                         <div class="valign-wrapper col s10">
-                            <p><?= $getOutingOne->outing_description ?></p>
+                            <p class="textOuting"><?= $getOutingOne->outing_description ?></p>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
             </div>
             <div class="row">
                 <div class="col s6 right-align">
-                    <a class="waves-effect waves-light btn yellow darken-3 " href="index.php?page=modifOuting">Modifier</a>
+                    <a class="waves-effect waves-light btn yellow darken-3 " href="index.php?page=modifOuting&id=<?= $getOutingOne->outing_id; ?>">Modifier</a>
                 </div>
                 <div class="col s6 left-align">
                     <button class="waves-effect waves-light btn yellow darken-3 modal-trigger"  href="#modaldeleteOuting">Supprimer</button>  <!-- Modal Structure -->

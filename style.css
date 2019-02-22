@@ -364,6 +364,21 @@ a {
     border-radius: 30px;
     width: 80%;
 }
+.pseudocardOuting{
+    color: #ef6c00;
+}
+.titleOuting{
+    font-family: 'Chewy', cursive; 
+    font-size : 5vh;
+    color : #2274A5;
+    font-weight: bold;
+}
+.textOuting{
+    font-family: 'Chewy', cursive; 
+    font-size : 3vh;
+    color : #2274A5;
+}
+
 .topcardSortie{
     border-bottom: 1px solid #80808063;
     background-image: linear-gradient(to bottom left, #2274A5, #ffff);
@@ -394,9 +409,14 @@ a {
     color: orange;
     text-shadow: 5px 5px 5px #000000;
 }
+#titlecardProfil{
+     font-family: 'Chewy', cursive; 
+    font-size: 2rem;
+}
 .fontInfouser{
-   font-family: monospace;
-   color: #2274A5;
+    font-family: 'Chewy', cursive; 
+    font-size: 1.3rem;
+    color: #2274A5;
 }
 /*css alert update*/
 .gradient-45deg-amber-amber{

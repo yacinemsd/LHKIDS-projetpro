@@ -47,10 +47,6 @@ class User extends Database {
                  . 'ON `user`.`userType_id` = `userType`.`userType_id`  '
                  . 'WHERE `user_pseudo` = :user_pseudo';
 
-//        . 'INNER JOIN `images`, '
-//        . 'ON `user`.`user_id` = `images`.`user_id`, '
-
-
         $getUserInformations = $database->prepare($query);
         $getUserInformations->bindValue(':user_pseudo', $this->user_pseudo, PDO::PARAM_STR);
         $getUserInformations->execute();
@@ -67,7 +63,8 @@ class User extends Database {
                 . '`userType_id` = :userType_id, '
                 . '`user_pseudo` = :user_pseudo, '
                 . '`user_password` = :user_password, '
-                . '`user_reasons` = :user_reasons '
+                . '`user_reasons` = :user_reasons, '
+                . '`user_image` = :user_image '
                 . 'WHERE `user_id` = :user_id';
 
         $updateUser = $database->prepare($query);
@@ -78,6 +75,7 @@ class User extends Database {
         $updateUser->bindValue(':user_pseudo', $this->user_pseudo, PDO::PARAM_STR);
         $updateUser->bindValue(':user_password', $this->user_password, PDO::PARAM_STR);
         $updateUser->bindValue(':user_reasons', $this->user_reasons, PDO::PARAM_STR);
+        $updateUser->bindValue(':user_image', $this->user_image, PDO::PARAM_STR);
         $updateUser->bindValue(':user_id', $this->user_id, PDO::PARAM_INT);
 
         return $updateUser->execute();

@@ -80,6 +80,8 @@ function showOutingOne() {
 
 function updateOuting() {
     if (isset($_POST['submitUpdateOuting'])) {
+        require 'formRules/outingFormRules.php';
+        if($formOutingValid){
             $UpdateOuting = new Outing();
             $UpdateOuting->outing_title = $_POST['title'];
             $UpdateOuting->outing_place = $_POST['place'];
@@ -92,20 +94,17 @@ function updateOuting() {
             $UpdateOuting->outingAge_id = $_POST['selectAge'];
             $UpdateOuting->outingPrice_id = $_POST['selectPrice'];
             $UpdateOuting->userOuting_id = $_SESSION['userInfos']->user_id;
-            $UpdateOuting->createOuting(); //la méthode createOuting retourne le dernier id qui a été inseré, cela servira pour l'insertion d'image
             $UpdateOuting->outing_id = $_GET['id'];
-            if (isset($_FILES['image'])) { // si ma valeur image existe j'hydrate ma valeur
+            $UpdateOuting->updateOuting(); 
+            if (!empty($_FILES['image']['name'])) { // si name n'est pas vide (= si j'upload une image) je rentre dans la condition et je remplace mon image par la nouvelle updload
                 $UpdateOuting->image_path = $_FILES['image']['name']; // je récupère la valeur name de image
                 move_uploaded_file($_FILES["image"]["tmp_name"], 'images/user_image/' . $_FILES["image"]["name"]);
+                $UpdateOuting->outing_id = $_GET['id'];
+                $UpdateOuting->updateImage();
             }
-            else {
-                $UpdateOuting->image_path = NULL;
-            }
-            $UpdateOuting->updateImage();
-            $_SESSION['createOutingOk'] = true;
-            header('Location: index.php?page=profil');
-            exit();
+            echo 'modif ok';
     }
+}
     $OutingType = new Outing();
     $getOutingTypes = $OutingType->getOutingTypes();
 
@@ -118,9 +117,13 @@ function updateOuting() {
     $OutingPrice = new Outing();
     $getOutingPrice = $OutingPrice->getOutingPrice();
 
+    $ShowOutingOne = new Outing();
+    $ShowOutingOne->outing_id = $_GET['id'];
+    $getOutingOne = $ShowOutingOne->showOutingOne();
 
     view('modifOuting.php', ['getOutingTypes' => $getOutingTypes,
         'getOutingEnvironment' => $getOutingEnvironment,
         'getOutingAge' => $getOutingAge,
-        'getOutingPrice' => $getOutingPrice]);
+        'getOutingPrice' => $getOutingPrice,
+        'getOutingOne' => $getOutingOne]);
 }

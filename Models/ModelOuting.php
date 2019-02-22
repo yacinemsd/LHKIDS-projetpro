@@ -88,7 +88,7 @@ class Outing extends Database {
         $createOuting->bindValue(':outingPrice_id', $this->outingPrice_id, PDO::PARAM_INT);
         $createOuting->bindValue(':userOuting_id', $this->userOuting_id, PDO::PARAM_INT);
         $createOuting->execute(); 
-        return $createOuting->lastInsertId();
+        return $database->lastInsertId();
     }
     
     public function insertImage() {
@@ -123,7 +123,8 @@ class Outing extends Database {
                 . 'INNER JOIN `user` '
                 . 'ON `user`.`user_id` = `outing`.`userOuting_id` '
                 . 'INNER JOIN `images` '
-                . 'ON `images`.`outing_id` = `outing`.`outing_id`';
+                . 'ON `images`.`outing_id` = `outing`.`outing_id` '
+                . 'ORDER BY `outing`.`outing_id` DESC';
 
         $getOutingInfos = $database->prepare($query);
         $getOutingInfos->execute();
@@ -181,7 +182,6 @@ class Outing extends Database {
         
         $query = 'UPDATE `outing` '
                 . 'SET `outing_id` = :outing_id, '
-                . '`outing_postDateTime` = :outing_postDateTime, '
                 . '`outing_title` = :outing_title, '
                 . '`outing_place` = :outing_place, '
                 . '`outing_date` = :outing_date, '
@@ -192,12 +192,11 @@ class Outing extends Database {
                 . '`outingEnvironment_id` = :outingEnvironment_id, '
                 . '`outingAge_id` = :outingAge_id, '
                 . '`outingPrice_id` = :outingPrice_id, '
-                . '`userOuting_id` = :userOuting_id, '
+                . '`userOuting_id` = :userOuting_id '
                 . 'WHERE `outing`.`outing_id` = :outing_id';
         
         $updateOuting = $database->prepare($query);
         $updateOuting->bindValue(':outing_id', $this->outing_id, PDO::PARAM_INT);
-        $updateOuting->bindValue(':outing_postDateTime', $this->outing_postDateTime, PDO::PARAM_STR);
         $updateOuting->bindValue(':outing_title', $this->outing_title, PDO::PARAM_STR);
         $updateOuting->bindValue(':outing_place', $this->outing_place, PDO::PARAM_STR);
         $updateOuting->bindValue(':outing_date', $this->outing_date, PDO::PARAM_STR);
@@ -209,7 +208,7 @@ class Outing extends Database {
         $updateOuting->bindValue(':outingAge_id', $this->outingAge_id, PDO::PARAM_INT);
         $updateOuting->bindValue(':outingPrice_id', $this->outingPrice_id, PDO::PARAM_INT);
         $updateOuting->bindValue(':userOuting_id', $this->userOuting_id, PDO::PARAM_INT);
-        $updateOuting->bindValue(':outing_id', $this->userOuting_id, PDO::PARAM_INT);
+        $updateOuting->bindValue(':outing_id', $this->outing_id, PDO::PARAM_INT);
         
         return $updateOuting->execute(); 
     }
@@ -217,8 +216,8 @@ class Outing extends Database {
         $database = $this->database;
 
         $query = 'UPDATE `images` '
-                . 'SET `image_path` = :image_path, '
-                . 'WHERE `outing`.`outing_id` = :outing_id';
+                . 'SET `image_path` = :image_path '
+                . 'WHERE `images`.`outing_id` = :outing_id';
         
         $insertImage = $database->prepare($query);
         $insertImage->bindValue(':image_path', $this->image_path, PDO::PARAM_STR);

@@ -15,6 +15,7 @@
     <!-- font -->
     <link href="https://fonts.googleapis.com/css?family=Galindo" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Slackey" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
   </head>
     <body>
       <header>

@@ -85,12 +85,18 @@ function userUpdate() {
             $User->userType_id = $_POST['selectuser'];
             $User->user_reasons = $_POST['reasons'];
             $User->user_id = $_SESSION['userInfos']->user_id;
+            if (!empty($_FILES['image']['name'])) { // si name n'est pas vide (= si j'upload une image) je rentre dans la condition et je remplace mon image par la nouvelle updload
+                $User->user_image = $_FILES['image']['name']; // je récupère la valeur name de image
+                move_uploaded_file($_FILES["image"]["tmp_name"], 'images/user_image/' . $_FILES["image"]["name"]);
+            }
+ 
+            var_dump($_FILES);
             $User->updateUser();
             $getUser = $User->getUserInformations();
             $_SESSION['userInfos'] = $getUser;
             $_SESSION['modifok'] = true;
-            header('Location: index.php?page=profil');
-            exit();
+//            header('Location: index.php?page=profil');
+//            exit();
         }
     }
     $userType = new UserType();
