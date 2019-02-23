@@ -43,9 +43,9 @@ if (!isset($_SESSION['userInfos'])) {
 <?php if (isset($_SESSION['modifok'])) { // si ma variable modif ok existe j'affiche mon alert ?>
     <div class="container-fluid">
         <div class="row">
-            <div class="col l4 offset-l7">
+            <div class="col l6 offset-l3">
                 <div class="card-alert card gradient-45deg-cyan-light-green">
-                    <div class="card-content white-text">
+                    <div class="card-content white-text center-align">
                         <p><i class="material-icons">check</i>
                             Vos modifications on été faites avec succès</p>
                     </div>
@@ -60,10 +60,10 @@ if (!isset($_SESSION['userInfos'])) {
 <?php if (isset($_SESSION['createOutingOk'])) { // si ma variable modif ok existe j'affiche mon alert ?>
     <div class="container-fluid">
         <div class="row">
-            <div class="col l4 offset-l7">
+            <div class="col l6 offset-l3">
                 <div class="card-alert card gradient-45deg-cyan-light-green">
-                    <div class="card-content white-text">
-                        <p><i class="material-icons">check</i>
+                    <div class="card-content white-text center-align">
+                        <p class="center-align"><i class="material-icons">check</i>
                             Votre sortie a été crée avec succès <a href="index.php?page=sorties">  ( voir ) </a></p>
                     </div>
                     <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">

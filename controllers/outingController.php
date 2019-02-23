@@ -102,7 +102,9 @@ function updateOuting() {
                 $UpdateOuting->outing_id = $_GET['id'];
                 $UpdateOuting->updateImage();
             }
-            echo 'modif ok';
+            $_SESSION['modifok'] = true;
+            header('Location: index.php?page=profil');
+            exit();
     }
 }
     $OutingType = new Outing();

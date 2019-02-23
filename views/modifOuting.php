@@ -92,7 +92,7 @@
                                     <div class="file-field input-field">
                                         <div class="btn grey lighten-1">
                                             <span>Images</span>
-                                            <input name="image" type="file" value="" multiple>
+                                            <input name="image" type="file" multiple>
                                         </div>
                                         <div class="file-path-wrapper">
                                             <input class="file-path validate" type="text" placeholder="" value="<?= $getOutingOne->image_path; ?>">

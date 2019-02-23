@@ -4,6 +4,9 @@
         <a href="index.php?page=home" class="brand-logo"><img class="logoNav" src="../images/logo.png" /></a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <?php if ($_GET['page'] !== 'home') { ?>         
+                <li><a href="index.php?page=home">Accueil</a></li>
+            <?php } ?>
             <?php if (isset($_SESSION['userInfos'])) { ?>
                 <?php if ($_GET['page'] !== 'profil') { ?>
                     <li><a href="index.php?page=profil">Mon Profil</a></li>
@@ -16,8 +19,10 @@
                 <?php } ?>
             <?php } ?>
             <?php if (!isset($_SESSION['userInfos'])) { ?>
-                <li><a href="index.php?page=inscription">Je m'inscris !</a></li>
-                <li><a href="index.php?page=connexion">Connexion</a></li>
+                <?php if ($_GET['page'] !== 'inscription' && $_GET['page'] !== 'connexion') { ?>
+                    <li><a href="index.php?page=inscription">Je m'inscris !</a></li>
+                    <li><a href="index.php?page=connexion">Connexion</a></li>
+                <?php } ?>
             <?php } ?>
             <?php if (isset($_SESSION['userInfos'])) { ?>
                 <li><a href="index.php?page=deconnexion">Deconnexion</a></li>
