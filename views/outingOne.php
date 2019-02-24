@@ -84,6 +84,7 @@
                 </div>
             </div>
             <div class="row">
+                <form action="" method="POST">
                 <div class="col s6 right-align">
                     <a class="waves-effect waves-light btn yellow darken-3 " href="index.php?page=modifOuting&id=<?= $getOutingOne->outing_id; ?>">Modifier</a>
                 </div>
@@ -97,11 +98,11 @@
                         <p>La supression de la sortie sera definitive et sans retour possible</p>
                     </div>
                     <div id="modalfooter" class="center-align">
-                        <button href="#!" class="modal-close waves-effect waves-green btn-flat red white-text center-align" name="submitDeleteOuting">Supprimer la sortie</button>
-                        <button href="#!" class="modal-close waves-effect waves-green btn-flat grey white-text center-align">Annuler</button>
+                            <button href="#!" class="modal-close waves-effect waves-green btn-flat red white-text center-align" name="submitDeleteOuting">Supprimer la sortie</button>
+                            <button href="#!" class="modal-close waves-effect waves-green btn-flat grey white-text center-align">Annuler</button>
                     </div>
                 </div>
-
+                </form>
             </div>
         </div>
     </div>

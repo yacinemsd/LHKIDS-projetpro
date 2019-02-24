@@ -41,6 +41,7 @@ if (isset($_GET['page'])) {
     }elseif ($_GET['page'] == 'outingOne') {
         require 'controllers/outingController.php';
         showOutingOne();
+        deleteOuting();
     }elseif ($_GET['page'] == 'modifOuting') {
         require 'controllers/outingController.php';
         updateOuting();

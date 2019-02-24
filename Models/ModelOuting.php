@@ -212,6 +212,7 @@ class Outing extends Database {
         
         return $updateOuting->execute(); 
     }
+    
     public function updateImage() {
         $database = $this->database;
 
@@ -226,4 +227,17 @@ class Outing extends Database {
         return $insertImage->execute();
     
     }
+    public function deleteOuting() {
+        $database = $this->database;
+        
+        $query = 'DELETE FROM `outing`'
+                . 'WHERE `outing_id` = :outing_id';
+        
+        $deleteOuting = $database->prepare($query);
+        $deleteOuting->bindValue(':outing_id', $this->outing_id, PDO::PARAM_INT);
+        
+        return $deleteOuting->execute();
+        
+    }
+    
 }

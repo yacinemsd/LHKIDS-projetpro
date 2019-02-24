@@ -40,6 +40,23 @@ if (!isset($_SESSION['userInfos'])) {
         </div>
     </div>
 </div>
+<?php if (isset($_SESSION['deleteOk'])) { // si ma variable modif ok existe j'affiche mon alert ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col l6 offset-l3">
+                <div class="card-alert card gradient-45deg-cyan-light-green">
+                    <div class="card-content white-text center-align">
+                        <p><i class="material-icons">check</i>
+                            Votre sortie a bien été supprimée</p>
+                    </div>
+                    <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } unset($_SESSION['deleteOk']); // je détruit aussitot la variable modif ok avec unset ?>
 <?php if (isset($_SESSION['modifok'])) { // si ma variable modif ok existe j'affiche mon alert ?>
     <div class="container-fluid">
         <div class="row">
@@ -113,19 +130,22 @@ if (!isset($_SESSION['userInfos'])) {
                         </div>
                     </div>
                     <div class="card-action center-align">
+                         <form action="" method="POST">
                             <a class="waves-effect waves-light btn yellow darken-3 " href="index.php?page=modifuser">Modifier</a>
                             <button class="waves-effect waves-light btn yellow darken-3 modal-trigger"  href="#modaldelete">Supprimer</button>  <!-- Modal Structure -->
                             <!-- Modal-->
                             <div id="modaldelete" class="modal center-align">
+                                <form action="" method="POST">
                                 <div class="modal-content">
                                     <h4>Suppression du compte</h4>
                                     <p>La supression de votre compte sera definitive et sans retour possible</p>
                                 </div>
-                                <div id="modalfooter" class="center-align">
+                                <div id="modalfooter" class="center-align">                            
                                     <button href="#!" class="modal-close waves-effect waves-green btn-flat red white-text center-align" name="submitDelete">Supprimer mon compte</button>
-                                    <button href="#!" class="modal-close waves-effect waves-green btn-flat grey white-text center-align">Annuler</button>
+                                    <button href="#!" class="modal-close waves-effect waves-green btn-flat grey white-text center-align">Annuler</button>            
                                 </div>
                             </div>
+                         </form>
                     </div>
                 </div>
             </div>

@@ -24,8 +24,7 @@ function outing() {
             if (isset($_FILES['image'])) { // si ma valeur image existe j'hydrate ma valeur
                 $Outing->image_path = $_FILES['image']['name']; // je récupère la valeur name de image
                 move_uploaded_file($_FILES["image"]["tmp_name"], 'images/user_image/' . $_FILES["image"]["name"]);
-            }
-            else {
+            } else {
                 $Outing->image_path = NULL;
             }
             $Outing->insertImage();
@@ -81,7 +80,7 @@ function showOutingOne() {
 function updateOuting() {
     if (isset($_POST['submitUpdateOuting'])) {
         require 'formRules/outingFormRules.php';
-        if($formOutingValid){
+        if ($formOutingValid) {
             $UpdateOuting = new Outing();
             $UpdateOuting->outing_title = $_POST['title'];
             $UpdateOuting->outing_place = $_POST['place'];
@@ -95,7 +94,7 @@ function updateOuting() {
             $UpdateOuting->outingPrice_id = $_POST['selectPrice'];
             $UpdateOuting->userOuting_id = $_SESSION['userInfos']->user_id;
             $UpdateOuting->outing_id = $_GET['id'];
-            $UpdateOuting->updateOuting(); 
+            $UpdateOuting->updateOuting();
             if (!empty($_FILES['image']['name'])) { // si name n'est pas vide (= si j'upload une image) je rentre dans la condition et je remplace mon image par la nouvelle updload
                 $UpdateOuting->image_path = $_FILES['image']['name']; // je récupère la valeur name de image
                 move_uploaded_file($_FILES["image"]["tmp_name"], 'images/user_image/' . $_FILES["image"]["name"]);
@@ -105,8 +104,8 @@ function updateOuting() {
             $_SESSION['modifok'] = true;
             header('Location: index.php?page=profil');
             exit();
+        }
     }
-}
     $OutingType = new Outing();
     $getOutingTypes = $OutingType->getOutingTypes();
 
@@ -128,4 +127,15 @@ function updateOuting() {
         'getOutingAge' => $getOutingAge,
         'getOutingPrice' => $getOutingPrice,
         'getOutingOne' => $getOutingOne]);
+}
+
+function deleteOuting() {
+    if (isset($_POST['submitDeleteOuting'])) {
+        $DeleteOuting = new Outing();
+        $DeleteOuting->outing_id = $_GET['id'];
+        $DeleteOuting->deleteOuting();
+        $_SESSION['deleteOk'] = true;
+        header('Location: index.php?page=profil');
+        exit();
+    }
 }
