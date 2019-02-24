@@ -40,23 +40,7 @@ if (!isset($_SESSION['userInfos'])) {
         </div>
     </div>
 </div>
-<?php if (isset($_SESSION['deleteOk'])) { // si ma variable modif ok existe j'affiche mon alert ?>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col l6 offset-l3">
-                <div class="card-alert card gradient-45deg-cyan-light-green">
-                    <div class="card-content white-text center-align">
-                        <p><i class="material-icons">check</i>
-                            Votre sortie a bien été supprimée</p>
-                    </div>
-                    <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-<?php } unset($_SESSION['deleteOk']); // je détruit aussitot la variable modif ok avec unset ?>
+
 <?php if (isset($_SESSION['modifok'])) { // si ma variable modif ok existe j'affiche mon alert ?>
     <div class="container-fluid">
         <div class="row">
@@ -91,7 +75,7 @@ if (!isset($_SESSION['userInfos'])) {
         </div>
     </div>
 <?php } unset($_SESSION['createOutingOk']); // je détruit aussitot la variable modif ok avec unset ?>
-<!--/ profile-page-header -->
+<!-- profile-page-header -->
 <div class="container-fluid">
     <div class="row">
         <div id="menuTab" class="col s10 offset-s1 z-depth-4">

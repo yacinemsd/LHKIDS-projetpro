@@ -111,7 +111,7 @@ function deleteUser(){
         $User->user_id = $_SESSION['userInfos']->user_id;
         $User->deleteUser();
         $_SESSION['deleteuserOk'] = true;
-        header('Location:index.php?page=home');
+        header('Location: index.php?page=home');
         exit();
     }
 }

@@ -17,10 +17,10 @@ if (isset($_GET['page'])) {
     } elseif ($_GET['page'] == 'mentionslegales') {
         view('mentionsLegales.php');
     } elseif ($_GET['page'] == 'profil') {
-        require 'controllers/userController.php';        
-        require 'controllers/outingController.php'; 
+        require 'controllers/userController.php';
+        require 'controllers/outingController.php';
         showOutingUser();
-        deleteUser();
+//        deleteUser();
     } elseif ($_GET['page'] == 'sorties') {
         require 'controllers/outingController.php';
         showOutings();
@@ -35,14 +35,14 @@ if (isset($_GET['page'])) {
     } elseif ($_GET['page'] == 'typesuser') {
         require 'controllers/typeController.php';
         createType();
-    }elseif ($_GET['page'] == 'outingForm') {
-       require 'controllers/outingController.php';
-       outing();
-    }elseif ($_GET['page'] == 'outingOne') {
+    } elseif ($_GET['page'] == 'outingForm') {
+        require 'controllers/outingController.php';
+        outing();
+    } elseif ($_GET['page'] == 'outingOne') {
         require 'controllers/outingController.php';
         showOutingOne();
         deleteOuting();
-    }elseif ($_GET['page'] == 'modifOuting') {
+    } elseif ($_GET['page'] == 'modifOuting') {
         require 'controllers/outingController.php';
         updateOuting();
     } else {
