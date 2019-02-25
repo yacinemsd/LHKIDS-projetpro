@@ -1,4 +1,4 @@
-<div><h1 class="center-align" id="formTitle">Modification</h1></div>
+<div><h1 class="center-align" id="formTitle">Modification sortie</h1></div>
 <div id="creationSortie" class="container-fluid ">
     <div class="row">
         <!-- profile-page-sidebar-->

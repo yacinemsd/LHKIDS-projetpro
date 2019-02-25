@@ -280,7 +280,7 @@ body{
 }
 #menuTab > .tabs > li > a{
     font-family: 'Slackey', cursive;
-    font-size: 1.7vw;
+    font-size: 3vh;
     color: orange;
     text-shadow: 2px 2px 3px #000000;
 }
@@ -311,7 +311,7 @@ div.row.infosprofil1{
 }
 .profiletitle p{
     font-family: 'Galindo', cursive;
-    font-size: 2.5vw;
+    font-size: 3.7vh;
     text-shadow: 2px 2px 3px #000000;
     color: #ffa500;
 }
@@ -415,7 +415,7 @@ a {
 }
 .fontInfouser{
     font-family: 'Chewy', cursive; 
-    font-size: 1.3rem;
+    font-size: 3vh;
     color: #2274A5;
 }
 /*css alert update*/

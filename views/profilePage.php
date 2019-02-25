@@ -105,10 +105,10 @@ if (!isset($_SESSION['userInfos'])) {
                     <div class="card-content white-text">
                         <span  id="titlecardProfil" class="card-title center-align">Mes Informations</span>
                         <div class="row infosprofil1">
-                            <div class="col s4">
+                            <div class="col s12 m4 l4">
                                 <img src="../images/user_image/<?= $_SESSION['userInfos']->user_image != "" ? $_SESSION['userInfos']->user_image : 'iconprofil.svg'; ?>" class="circle z-depth-3 imgprofil">
                             </div>
-                            <div class="col s7 offset-l1">
+                            <div class="col s12-center-align m7 l7 offset-l1">
                                 <div class="row">
                                     <p class="fontInfouser">Nom :  <?= $_SESSION['userInfos']->user_lastname; ?></p>
                                 </div>
