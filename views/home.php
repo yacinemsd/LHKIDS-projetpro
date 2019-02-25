@@ -26,7 +26,7 @@
 <?php if (isset($_SESSION['deleteuserOk'])) { // si ma variable deleteuserOk existe j'affiche mon alert ?>
     <div class="container-fluid">
         <div class="row">
-            <div class="col l4 offset-l1">
+            <div class="col l6 offset-l3">
                 <div class="card-alert card gradient-45deg-cyan-light-green">
                     <div class="card-content white-text">
                         <p><i class="material-icons">check</i>

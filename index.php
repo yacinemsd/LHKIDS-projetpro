@@ -19,8 +19,8 @@ if (isset($_GET['page'])) {
     } elseif ($_GET['page'] == 'profil') {
         require 'controllers/userController.php';
         require 'controllers/outingController.php';
+        deleteUser();
         showOutingUser();
-//        deleteUser();
     } elseif ($_GET['page'] == 'sorties') {
         require 'controllers/outingController.php';
         showOutings();
@@ -40,8 +40,8 @@ if (isset($_GET['page'])) {
         outing();
     } elseif ($_GET['page'] == 'outingOne') {
         require 'controllers/outingController.php';
-        showOutingOne();
         deleteOuting();
+        showOutingOne();
     } elseif ($_GET['page'] == 'modifOuting') {
         require 'controllers/outingController.php';
         updateOuting();

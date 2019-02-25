@@ -106,11 +106,11 @@ function userUpdate() {
 
 function deleteUser(){
     if(isset($_POST['submitDelete'])){
-        
         $User = new User();
         $User->user_id = $_SESSION['userInfos']->user_id;
         $User->deleteUser();
         $_SESSION['deleteuserOk'] = true;
+        unset($_SESSION['userInfos']);
         header('Location: index.php?page=home');
         exit();
     }

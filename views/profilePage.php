@@ -41,6 +41,23 @@ if (!isset($_SESSION['userInfos'])) {
     </div>
 </div>
 
+<?php if (isset($_SESSION['deleteOutingOk'])) { // si ma variable modif ok existe j'affiche mon alert ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col l6 offset-l3">
+                <div class="card-alert card gradient-45deg-cyan-light-green">
+                    <div class="card-content white-text center-align">
+                        <p><i class="material-icons">check</i>
+                            Votre sortie a été supprimée avec succès</p>
+                    </div>
+                    <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } unset($_SESSION['deleteOutingOk']); // je détruit aussitot la variable modif ok avec unset ?>
 <?php if (isset($_SESSION['modifok'])) { // si ma variable modif ok existe j'affiche mon alert ?>
     <div class="container-fluid">
         <div class="row">
@@ -75,7 +92,7 @@ if (!isset($_SESSION['userInfos'])) {
         </div>
     </div>
 <?php } unset($_SESSION['createOutingOk']); // je détruit aussitot la variable modif ok avec unset ?>
-<!-- profile-page-header -->
+<!-- profile-page-head -->
 <div class="container-fluid">
     <div class="row">
         <div id="menuTab" class="col s10 offset-s1 z-depth-4">
@@ -125,8 +142,8 @@ if (!isset($_SESSION['userInfos'])) {
                                     <p>La supression de votre compte sera definitive et sans retour possible</p>
                                 </div>
                                 <div id="modalfooter" class="center-align">                            
-                                    <button href="#!" class="modal-close waves-effect waves-green btn-flat red white-text center-align" name="submitDelete">Supprimer mon compte</button>
-                                    <button href="#!" class="modal-close waves-effect waves-green btn-flat grey white-text center-align">Annuler</button>            
+                                    <button class="modal-close waves-effect waves-green btn-flat red white-text center-align" name="submitDelete">Supprimer mon compte</button>
+                                    <button class="modal-close waves-effect waves-green btn-flat grey white-text center-align">Annuler</button>            
                                 </div>
                             </div>
                          </form>

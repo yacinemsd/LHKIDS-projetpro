@@ -128,14 +128,14 @@ function updateOuting() {
         'getOutingPrice' => $getOutingPrice,
         'getOutingOne' => $getOutingOne]);
 }
-//
-//function deleteOuting() {
-//    if (isset($_POST['submitDeleteOuting'])) {
-//        $DeleteOuting = new Outing();
-//        $DeleteOuting->outing_id = $_GET['id'];
-//        $DeleteOuting->deleteOuting();
-//        $_SESSION['deleteOk'] = true;
-//        header('Location: index.php?page=profil');
-//        exit();
-//    }
-//}
+
+function deleteOuting() {
+    if (isset($_POST['submitDeleteOuting'])) {
+        $DeleteOuting = new Outing();
+        $DeleteOuting->outing_id = $_GET['id'];
+        $DeleteOuting->deleteOuting();
+        $_SESSION['deleteOutingOk'] = true;
+        header('Location: index.php?page=profil');
+        exit();
+    }
+}
