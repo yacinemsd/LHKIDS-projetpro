@@ -29,7 +29,7 @@ if (!isset($_SESSION['userInfos'])) {
         </div>
         <div class="col s3 center-align divTitleProfile">
             <div class="profiletitle center-align">
-                <p>Mes Favoris</p>
+                <p>Mes Commentaires</p>
             </div>
             <div class="profiletitle2 center-align">
                 <p>0</p>

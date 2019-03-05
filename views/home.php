@@ -6,7 +6,6 @@
         <a href="index.php?page=home" class="collection-item">Accueil</a>
         <a href="index.php?page=sorties" class="collection-item">Les Bons plans sorties !</a>
         <a href="index.php?page=profil" class="collection-item">Je partage !</a>
-        <a href="#!" class="collection-item">Contact</a>
       </div>
     </div>
     <div class="col s7 m6 l9 ">
@@ -71,7 +70,7 @@
           <img src="../images/inscription.jpg">
         </div>
         <div class="card-content cardContent">
-          <p>Simple, rapide et gratuite l'inscription vous permettra d'avoir votre  propre compte LH Kids</p>
+          <p>Simple, rapide et gratuite l'inscription vous permettra d'avoir votre propre compte LH Kids</p>
         </div>
         <div class="card-action" id="cardLink">
           <a href="index.php?page=inscription">Je m'inscris !</a>

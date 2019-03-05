@@ -14,6 +14,7 @@ body{
 #navbar a{
     margin-right: 50px;
     font-family: 'Galindo', cursive;
+    font-size: 1.1vw
 }
 #navbar a:hover{
     color: orange;
@@ -39,6 +40,7 @@ body{
     color: #476489;
     font-weight: bold;
     font-family: 'Galindo', cursive;
+    font-size: 2.2vh;
 
 }
 #menu1 a:hover{
@@ -77,12 +79,12 @@ body{
 }
 #buttonheader1:hover{
     width: 13.5vw;
-    height: 6vh;
+    height: 5vh;
     background-color: orange;
 }
 #buttonheader2:hover{
     width: 13.5vw;
-    height: 6vh;
+    height: 5vh;
     background-color: orange;
 }
 /* fin header accueil */
@@ -94,7 +96,7 @@ body{
 }
 #title1{
     font-family: 'Slackey', cursive;
-    font-size: 4vw;
+    font-size: 6.3vh;
     color: orange;
     text-shadow: 5px 5px 5px #000000;
 }
@@ -150,13 +152,14 @@ body{
     font-family: 'Galindo', cursive;
     color: orange;
     text-shadow: 2px 2px 3px #000000;
+    font-size: 2.5vh;
 }
 #cardLink a:hover{
     font-size: 1.5vw;
 }
 .cardContent p{
     font-weight: bold;
-    font-size: 2.5vh;
+    font-size: 2.8vh;
 }
 .titlecard{
     font-family: 'Play', sans-serif;
@@ -205,7 +208,7 @@ body{
 }
 #textfooter p{
     color: #ffff;
-    font-size: 2.5vh;
+    font-size: 2.8vh;
 }
 .mentions a{
     margin-left: 36vw;
